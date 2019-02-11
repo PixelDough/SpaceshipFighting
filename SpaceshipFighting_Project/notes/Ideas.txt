@@ -1,0 +1,2 @@
+Blue - Charge beam for bigger bullet.
+Red - Rapid fire mini beams alternating between turrets.

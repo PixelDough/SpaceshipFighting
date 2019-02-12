@@ -3,13 +3,13 @@ depth = -bbox_top;
 
 if !instance_place_loop(x + lengthdir_x(16, dir) + hspeed, y, obj_wall) {
 	//speed = clamp(speed+0.25, 0, 5);
-	hspeed = clamp(hspeed+lengthdir_x(0.25, dir), -5, 5);
+	hspeed = clamp(hspeed+lengthdir_x(0.25, dir), -2, 2);
 } else {
 	hspeed = lerp(hspeed, 0, 0.01);
 }
 
 if !instance_place_loop(x, y + lengthdir_y(16, dir) + vspeed, obj_wall) {
-	vspeed = clamp(vspeed+lengthdir_y(0.25, dir), -5, 5);
+	vspeed = clamp(vspeed+lengthdir_y(0.25, dir), -2, 2);
 } else {
 	vspeed = lerp(vspeed, 0, 0.01);
 }
@@ -49,25 +49,26 @@ switch(_shortest) {
 }
 
 
-var _buff = 15;
-//if abs(angle_difference(dir, _dir_to_player)) > _buff
-	dir = angle_approach(dir, _dir_to_player, 5);
+//var _buff = 15;
 
-////if input.action_one-input.action_two != 0 {
-////	height = clamp(height+(input.action_one-input.action_two), 5, 64);
-////}
-//if input.action_two {
-//	hasShield = true;
-//	speed = lerp(speed, 0, 0.15);
+//var _closestWall = instance_nearest(x, y, obj_wall);
+//if distance_to_object(_closestWall) < 16 {
+//	var _closestWallAngle = point_direction(x, y, obj_wall.x, obj_wall.y);
+//	dir = angle_approach(dir, _closestWallAngle-180, 5);
 //} else {
-//	hasShield = false;
-//	if input.action_one_pressed and alarm[0] <= 0 {
-//		var _laser = instance_create_depth(x, y, depth+10, obj_laser);
-//		_laser.height = height;
-//		_laser.dir = dir;
-//		alarm[0] = 15;
-//	}
+//	dir = angle_approach(dir, _dir_to_player, 5);
 //}
+if global.time % 10 == 0 {
+
+	mp_grid_path(grid, path, x+hspeed, y+vspeed, obj_ship.x, obj_ship.y, false);
+	funcPathOptimized(path, 32, obj_wall);
+	path_set_kind(path, 1);
+}
+
+targetX = approach(targetX, path_get_x(path, 0.2), 2);
+targetY = approach(targetY, path_get_y(path, 0.2), 2);
+
+dir = angle_approach(dir, point_direction(x, y, targetX, targetY), 5);
 
 self_loop();
 

@@ -1,10 +1,10 @@
 
 dir = 0;
-spd = 8;
+spd = 12;
 
 height = 24;
 
-alarm[0] = 60;
+alarm[0] = 30;
 
 enum LASER {
 	MOVE,

@@ -22,11 +22,16 @@ if input.r - input.l != 0 {
 //	height = clamp(height+(input.action_one-input.action_two), 5, 64);
 //}
 if input.action_two {
-	hasShield = true;
+	if !shield {
+		shield = instance_create_depth(x, y, depth, obj_shield);
+	}
 	speed = lerp(speed, 0, 0.15);
 } else {
-	hasShield = false;
-	if input.action_one_pressed and alarm[0] <= 0 {
+	if shield {
+		instance_destroy(shield);
+	}
+	shield = noone;
+	if input.action_one and alarm[0] <= 0 {
 		var _laser = instance_create_depth(x, y, depth+10, obj_laser);
 		_laser.height = height;
 		_laser.dir = dir;

@@ -5,4 +5,4 @@ vspeed = 0;
 
 height = 24;
 
-hasShield = false;
+shield = noone;

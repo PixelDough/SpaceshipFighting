@@ -3,6 +3,8 @@ dir = 0;
 hspeed = 0;
 vspeed = 0;
 
+spd_max = 5;
+
 targetX = x;
 targetY = y
 

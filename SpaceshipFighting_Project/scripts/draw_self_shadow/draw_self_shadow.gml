@@ -22,5 +22,5 @@ var _alpha = argument8;
 var _shadow_distance = argument9;
 var _shadow_alpha = argument10;
 
-draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rotation, c_black, _shadow_alpha);
+draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rotation, c_black, image_alpha-0.75);
 draw_sprite_ext(_sprite, _subimg, _x, _y + (sin(global.time/5))-_shadow_distance, _xscale, _yscale, _rotation, _color, _alpha);

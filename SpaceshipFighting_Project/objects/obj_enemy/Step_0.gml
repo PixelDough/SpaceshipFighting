@@ -3,13 +3,13 @@ depth = -bbox_top;
 
 if !instance_place_loop(x + lengthdir_x(16, dir) + hspeed, y, obj_wall) {
 	//speed = clamp(speed+0.25, 0, 5);
-	hspeed = clamp(hspeed+lengthdir_x(0.25, dir), -2, 2);
+	hspeed = clamp(hspeed+lengthdir_x(0.25, dir), -spd_max, spd_max);
 } else {
 	hspeed = lerp(hspeed, 0, 0.01);
 }
 
 if !instance_place_loop(x, y + lengthdir_y(16, dir) + vspeed, obj_wall) {
-	vspeed = clamp(vspeed+lengthdir_y(0.25, dir), -2, 2);
+	vspeed = clamp(vspeed+lengthdir_y(0.25, dir), -spd_max, spd_max);
 } else {
 	vspeed = lerp(vspeed, 0, 0.01);
 }
@@ -33,18 +33,23 @@ var _player_dist_r = distance_to_point(_player_r[0], _player_r[1])
 var _shortest = min(_player_dist, _player_dist_u, _player_dist_d, _player_dist_l, _player_dist_r);
 
 var _dir_to_player = point_direction(x, y, obj_ship.x, obj_ship.y);
+var _target_player_pos = _player;
 switch(_shortest) {
 	case _player_dist_u:
 		_dir_to_player = point_direction(x, y, _player_u[0], _player_u[1]);
+		_target_player_pos = _player_u;
 		break;
 	case _player_dist_d:
 		_dir_to_player = point_direction(x, y, _player_d[0], _player_d[1]);
+		_target_player_pos = _player_d;
 		break;
 	case _player_dist_l:
 		_dir_to_player = point_direction(x, y, _player_l[0], _player_l[1]);
+		_target_player_pos = _player_l;
 		break;
 	case _player_dist_r:
 		_dir_to_player = point_direction(x, y, _player_r[0], _player_r[1]);
+		_target_player_pos = _player_r;
 		break;
 }
 
@@ -60,7 +65,7 @@ switch(_shortest) {
 //}
 if global.time % 10 == 0 {
 
-	mp_grid_path(grid, path, x+hspeed, y+vspeed, obj_ship.x, obj_ship.y, false);
+	mp_grid_path(grid, path, x+hspeed, y+vspeed, _target_player_pos[0], _target_player_pos[1], true);
 	funcPathOptimized(path, 32, obj_wall);
 	path_set_kind(path, 1);
 }

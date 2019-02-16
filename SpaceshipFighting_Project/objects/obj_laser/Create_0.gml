@@ -4,7 +4,7 @@ spd = 12;
 
 height = 24;
 
-alarm[0] = 30;
+alarm[0] = die_timer;
 
 enum LASER {
 	MOVE,

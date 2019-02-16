@@ -6,3 +6,5 @@ vspeed = 0;
 height = 24;
 
 shield = noone;
+
+life = life_max;

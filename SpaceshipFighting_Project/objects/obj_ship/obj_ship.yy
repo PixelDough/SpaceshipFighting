@@ -43,6 +43,16 @@
             "enumb": 0,
             "eventtype": 2,
             "m_owner": "56eeab94-708d-4678-8b7b-0cca372060a7"
+        },
+        {
+            "id": "bc8d861f-0fb3-436c-bc50-6d953e26385b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 64,
+            "eventtype": 8,
+            "m_owner": "56eeab94-708d-4678-8b7b-0cca372060a7"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -61,8 +71,79 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "d38131a2-5ed8-4ea8-96f6-217b8d81feeb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "obj_laser",
+            "varName": "laser_type",
+            "varType": 5
+        },
+        {
+            "id": "aac86a7c-7948-4535-9223-4ecf68d31659",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 10,
+            "rangeMin": 1,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "speed_max",
+            "varType": 1
+        },
+        {
+            "id": "5a745da6-afbb-490b-913e-b302b61cf0d3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 10,
+            "rangeMin": 1,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "turn_speed",
+            "varType": 1
+        },
+        {
+            "id": "e532b42f-8683-48c6-8cb6-2a58e9db485e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 3,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "player_num",
+            "varType": 1
+        },
+        {
+            "id": "7b0e8512-29e6-434c-a89d-6536fbfaa1ac",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 10,
+            "rangeMin": 1,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "life_max",
+            "varType": 1
+        }
+    ],
     "solid": false,
-    "spriteId": "d8202d4e-b990-474a-86d4-8dfe739a122f",
+    "spriteId": "3fd09671-c6e4-4f2f-8e37-649de311393a",
     "visible": true
 }

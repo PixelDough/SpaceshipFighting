@@ -1,0 +1,72 @@
+{
+    "id": "038417e7-e3bd-425d-aa00-0ca3019874c5",
+    "modelName": "GMObject",
+    "mvc": "1.0",
+    "name": "obj_ship2",
+    "eventList": [
+        
+    ],
+    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "overriddenProperties": null,
+    "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+    "persistent": false,
+    "physicsAngularDamping": 0.1,
+    "physicsDensity": 0.5,
+    "physicsFriction": 0.2,
+    "physicsGroup": 0,
+    "physicsKinematic": false,
+    "physicsLinearDamping": 0.1,
+    "physicsObject": false,
+    "physicsRestitution": 0.1,
+    "physicsSensor": false,
+    "physicsShape": 1,
+    "physicsShapePoints": null,
+    "physicsStartAwake": true,
+    "properties": [
+        {
+            "id": "6aa855f0-c550-49f3-a4e0-03c4dde6c7c9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 256,
+            "value": "obj_laser",
+            "varName": "laser_type",
+            "varType": 5
+        },
+        {
+            "id": "49680daa-7b91-4d17-965c-0f11aafdfaf9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 3,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "player_num",
+            "varType": 1
+        },
+        {
+            "id": "a503aa68-b755-4203-b273-9860f35fa1c5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 10,
+            "rangeMin": 1,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "life_max",
+            "varType": 1
+        }
+    ],
+    "solid": false,
+    "spriteId": "3c7400b2-b89e-4b85-9dad-e366c3b5666f",
+    "visible": true
+}

@@ -87,34 +87,6 @@
             "varType": 5
         },
         {
-            "id": "aac86a7c-7948-4535-9223-4ecf68d31659",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": true,
-            "rangeMax": 10,
-            "rangeMin": 1,
-            "resourceFilter": 1023,
-            "value": "5",
-            "varName": "speed_max",
-            "varType": 1
-        },
-        {
-            "id": "5a745da6-afbb-490b-913e-b302b61cf0d3",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": true,
-            "rangeMax": 10,
-            "rangeMin": 1,
-            "resourceFilter": 1023,
-            "value": "5",
-            "varName": "turn_speed",
-            "varType": 1
-        },
-        {
             "id": "e532b42f-8683-48c6-8cb6-2a58e9db485e",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

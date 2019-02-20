@@ -14,3 +14,5 @@ keyboard_set_map(ord("Z"),ord("M"));
 keyboard_set_map(ord("X"),ord("N"));
 
 controller_detected = false;
+
+singleton();

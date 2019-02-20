@@ -23,29 +23,29 @@ if TITLE_STATE == TITLE_STATES.TITLE {
 
 if TITLE_STATE == TITLE_STATES.MENU {
 	var _current_sel = MENU_SEL;
-	MENU_SEL = clamp(MENU_SEL + input.r_p - input.l_p, 0, array_length_1d(MENU_VARS)-1);
+	MENU_SEL = clamp(MENU_SEL + input.d_p - input.u_p, 0, array_length_1d(MENU_VARS)-1);
 	
 	for (var _i=0; _i<array_length_1d(MENU_VARS); _i++) {
 		var _vars = MENU_VARS[_i];
 		
-		var _float = sin((global.time/10)+_vars[1]);
-		draw_sprite_ext(_vars[4], 0, _vars[1], _vars[2]-64, _vars[3], _vars[3], sin(global.time/20)*2, c_white, 1)
-		
-		//draw_sprite_stretched(_vars[4], 0, _vars[1]-64, _vars[2] - 64 + 80 + _float, 128, 128);
-		draw_text_outlined(_vars[1], _vars[2] + _float, _vars[0], c_white, c_black, _vars[3], _vars[3], 0)
-		//draw_text_transformed(_vars[1], _vars[2] + _float, _vars[0], _vars[3], _vars[3], 0)
+		var _col = c_teal;
 		if _i == MENU_SEL {
-			_vars[3] = lerp(_vars[3], 1.5, 0.25);
-			if MENU_SEL != _current_sel {
-				
+			_vars[1] = lerp(_vars[1], 1.5, 0.25);
+			
+			_col = c_aqua
+			
+			if input.action_one_pressed and _vars[2] != noone {
+				script_execute(_vars[2]);
 			}
-			//draw_sprite(spr_menuBanner, _i, room_width/2, room_height/1.5);
+			
 		} else {
-			_vars[3] = lerp(_vars[3], 1, 0.25);
+			_vars[1] = lerp(_vars[1], 1, 0.25);
 		}
+		
+		var _float = sin((global.time/10));
+		
+		draw_text_outlined(room_width/2, room_height/2 + _i*(string_height(_vars[0])*2) + _float, _vars[0], _col, c_black, _vars[1], _vars[1], 0)
 		
 		MENU_VARS[_i] = _vars;
 	}
-	//draw_text(room_width/4, room_height/2, "BATTLE");
-	//draw_text(room_width-(room_width/4), room_height/2, "MISSION");
 }

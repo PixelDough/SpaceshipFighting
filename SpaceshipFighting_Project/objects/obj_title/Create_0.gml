@@ -13,37 +13,31 @@ title_to_menu_time = 60;
 
 
 /// MENU VARIABLES
-enum MENU {
-	BATTLE,
-	MISSION,
-	OPTIONS
+enum TITLE {
+	START,
+	OPTIONS,
+	QUIT
 }
-MENU_SEL = MENU.BATTLE;
+MENU_SEL = TITLE.START;
 
 MENU_VARS = [];
 
-MENU_VARS[MENU.BATTLE] = [
-	"BATTLE",
-	room_width/4,
-	room_height/2 + 128,
+MENU_VARS[TITLE.START] = [
+	"START",
 	1,
-	spr_menuIcon_battle
+	scr_title_start
 ];
 
-MENU_VARS[MENU.MISSION] = [
-	"MISSION",
-	room_width-(room_width/4),
-	room_height/2 + 128,
-	1,
-	spr_menuIcon_mission
-];
-
-MENU_VARS[MENU.OPTIONS] = [
+MENU_VARS[TITLE.OPTIONS] = [
 	"OPTIONS",
-	64,
-	room_height-64,
+	1,
+	noone
+];
+
+MENU_VARS[TITLE.QUIT] = [
+	"QUIT",
 	1, 
-	spr_laser
+	scr_title_quit
 ]
 
 audio_stop_all();

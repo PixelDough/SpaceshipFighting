@@ -5,6 +5,7 @@
     "name": "52d01d36-6e1a-4b55-96f5-029014b3f38e-room",
     "children": [
         "26fee5a2-30ed-444c-ad42-e575f22abfc9",
+        "a60740a2-1d5b-4d9f-bb65-8bc8a7ca75c3",
         "e6a9bd33-6ba4-4940-897b-768ceea5c79a",
         "aecabaa6-f386-4606-ac10-a0e10c46bd19"
     ],

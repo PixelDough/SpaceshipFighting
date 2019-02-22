@@ -1,6 +1,2 @@
 
-with object_index {
-	if id != other.id {
-		instance_destroy(other)
-	}
-}
+if instance_number(object_index) > 1 {instance_destroy();}

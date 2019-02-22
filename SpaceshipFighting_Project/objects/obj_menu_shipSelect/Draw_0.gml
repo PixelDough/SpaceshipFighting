@@ -5,7 +5,7 @@ for (var _i=0; _i<_shipCount; _i++) {
 	draw_sprite(spr_menu_ships, _i, 48 + (_i*48), 64);
 }
 
-if input.pause_pressed {
+if keyboard_check_pressed(vk_enter) {
 	playerAdd();
 }
 
@@ -26,8 +26,8 @@ for (var _r=0; _r<4; _r++) {
 	if global.playerCount <= _r {
 		draw_text_outlined(_x, _y, "PRESS\nSTART", c_white, c_black, 1, 1, 0)
 	} else {
-		if input2.r_p[_r] - input2.l_p[_r] != 0 {
-			global.playerData[_r, PLAYER_DATA.SHIP] += input2.r_p[_r]-input2.l_p[_r];
+		if input.r_p[_r] - input.l_p[_r] != 0 {
+			global.playerData[_r, PLAYER_DATA.SHIP] += input.r_p[_r]-input.l_p[_r];
 			if global.playerData[_r, PLAYER_DATA.SHIP] < 0
 				global.playerData[_r, PLAYER_DATA.SHIP] = array_length_1d(global.ships)-1
 			if global.playerData[_r, PLAYER_DATA.SHIP] > array_length_1d(global.ships)-1

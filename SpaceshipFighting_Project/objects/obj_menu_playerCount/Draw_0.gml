@@ -1,7 +1,7 @@
 
 var _size = array_length_1d(MENU_PLAYERCOUNT);
 
-SEL = clamp(SEL + (input.d_p - input.u_p), 0, _size-1);
+SEL = clamp(SEL + (inputCheck(-1, INPUT.DOWN, INPUT_STATE.PRESSED) - inputCheck(-1, INPUT.UP, INPUT_STATE.PRESSED)), 0, _size-1);
 
 for (var _i=0; _i<_size; _i++) {
 	var _this = MENU_PLAYERCOUNT[_i];
@@ -15,7 +15,7 @@ for (var _i=0; _i<_size; _i++) {
 	var _spriteColor = c_black
 	if SEL == _i {
 		_spriteColor = c_white
-		if input.action_one_pressed {
+		if inputCheck(-1, INPUT.A, INPUT_STATE.PRESSED) {
 			room_change_swipe(title)
 		}
 	}

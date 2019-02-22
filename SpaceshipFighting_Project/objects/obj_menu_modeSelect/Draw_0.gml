@@ -1,7 +1,7 @@
 
 var _size = array_length_1d(MENU_MODES);
 
-SEL = clamp(SEL + (input.d_p - input.u_p), 0, _size-1);
+SEL = clamp(SEL + (inputCheck(-1, INPUT.DOWN, INPUT_STATE.PRESSED) - inputCheck(-1, INPUT.UP, INPUT_STATE.PRESSED)), 0, _size-1);
 
 for (var _i=0; _i<_size; _i++) {
 	var _this = MENU_MODES[_i];
@@ -21,7 +21,7 @@ for (var _i=0; _i<_size; _i++) {
 		
 		draw_text_outlined((room_width/2)-128, _y+32, _this[MODES_ARR.SUBTITLE], _col, _col2, _this[MODES_ARR.SCALE]/2, _this[MODES_ARR.SCALE]/2, 0);
 		
-		if input.action_one_pressed and _this[2] != noone {
+		if inputCheck(-1, INPUT.A, INPUT_STATE.PRESSED) and _this[2] != noone {
 			script_execute(_this[MODES_ARR.SCRIPT]);
 		}
 			

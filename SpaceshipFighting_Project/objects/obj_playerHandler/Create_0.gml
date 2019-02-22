@@ -1,5 +1,7 @@
 
-singleton();
+if !singleton()
+	exit;
+
 
 global.playerCount = 0;
 

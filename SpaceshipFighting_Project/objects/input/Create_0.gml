@@ -1,6 +1,35 @@
 
 singleton();
 
+enabled = true;
+
+enum INPUT {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+	
+	A,
+	B,
+	X,
+	Y,
+	
+	L,
+	R,
+	
+	ZL,
+	ZR,
+	
+	START,
+	SELECT,
+}
+
+enum INPUT_STATE {
+	PRESSED,
+	HELD,
+	RELEASED
+}
+
 playerInputDevice = [];
 
 playerInputDevice[3] = noone; // represents NULL/NONE

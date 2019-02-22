@@ -1,2 +1,9 @@
-Blue - Charge beam for bigger bullet.
-Red - Rapid fire mini beams alternating between turrets.
+
+How to handle multiple inputs
+
+# Enum with every input type (Up, A Pressed, Start)
+- Array where each slot for each item in the input enum stores a bool of that input check.
+- Array for each player (1,2,3,4) that stores a copy of the input array for each one.
+
+- Script to check an input, that takes a player number and the enum id you want to check. Uses case.
+

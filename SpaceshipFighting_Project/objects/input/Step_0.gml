@@ -14,6 +14,7 @@ for (var i = 0; i < 8; i++)
 			for (var _d=0; _d<array_length_1d(playerInputDevice); _d++) {
 				if playerInputDevice[_d] == noone {
 					playerInputDevice[_d] = i;
+					playerAdd();
 					break;
 				}
 			}
@@ -41,6 +42,8 @@ if keyboard_check_pressed(vk_enter) {
 		for (var _d=0; _d<array_length_1d(playerInputDevice); _d++) {
 			if playerInputDevice[_d] == noone {
 				playerInputDevice[_d] = -1;
+				playerAdd();
+				playerAdd();
 				break;
 			}
 		}
@@ -56,3 +59,4 @@ for (var _p=0; _p<array_length_1d(playerInputDevice); _p++) {
 	
 }
 
+//global.playerCount = array_length_1d(playerInputDevice)-1

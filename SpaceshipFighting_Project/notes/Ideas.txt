@@ -1,9 +1,15 @@
 
 How to handle multiple inputs
 
-# Enum with every input type (Up, A Pressed, Start)
-- Array where each slot for each item in the input enum stores a bool of that input check.
+# Enum with every input type (Up, A, Start)
+- Array where each slot for each id in the input enum stores the input check type.
 - Array for each player (1,2,3,4) that stores a copy of the input array for each one.
 
 - Script to check an input, that takes a player number and the enum id you want to check. Uses case.
 
+
+
+- Array for storing player input sources (keyboard or controller num)
+- Array for storing 
+
+global.playerData[InputSource, Ship]

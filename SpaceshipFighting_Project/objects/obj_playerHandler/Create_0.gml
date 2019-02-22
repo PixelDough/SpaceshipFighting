@@ -6,6 +6,7 @@ if !singleton()
 global.playerCount = 0;
 
 enum PLAYER_DATA {
+	INPUT_SOURCE,
 	SHIP,
 }
 

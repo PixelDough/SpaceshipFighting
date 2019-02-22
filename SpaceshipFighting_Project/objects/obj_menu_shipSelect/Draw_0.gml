@@ -26,15 +26,15 @@ for (var _r=0; _r<4; _r++) {
 	if global.playerCount <= _r {
 		draw_text_outlined(_x, _y, "PRESS\nSTART", c_white, c_black, 1, 1, 0)
 	} else {
-		if input.r_p - input.l_p != 0 {
-			global.playerData[_r, PLAYER_DATA.SHIP] += input.r_p-input.l_p;
+		if input2.r_p[_r] - input2.l_p[_r] != 0 {
+			global.playerData[_r, PLAYER_DATA.SHIP] += input2.r_p[_r]-input2.l_p[_r];
 			if global.playerData[_r, PLAYER_DATA.SHIP] < 0
 				global.playerData[_r, PLAYER_DATA.SHIP] = array_length_1d(global.ships)-1
 			if global.playerData[_r, PLAYER_DATA.SHIP] > array_length_1d(global.ships)-1
 				global.playerData[_r, PLAYER_DATA.SHIP] = 0;
 			
 		}
-		draw_sprite(object_get_sprite(global.ships[global.playerData[_r, PLAYER_DATA.SHIP]]), 0, _x, _y)
+		draw_sprite_ext(object_get_sprite(global.ships[global.playerData[_r, PLAYER_DATA.SHIP]]), 0, _x, _y, 2, 2, global.time/2, c_white, 1)
 	}
 	
 }

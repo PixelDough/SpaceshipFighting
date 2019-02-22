@@ -1212,7 +1212,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\/input\/input.yy",
+                "resourcePath": "objects\/inputOLD\/inputOLD.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -5245,6 +5245,25 @@
             }
         },
         {
+            "Key": "ca8af802-3134-4aa1-a144-614f4ceeef7d",
+            "Value": {
+                "id": "29152378-ea59-4786-b799-2b57010b19cc",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/checkInputDevice\/checkInputDevice.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ca9522f0-f41e-4ac5-ab19-d88d0109e1de",
             "Value": {
                 "id": "6af79d5c-a01f-4842-a96b-125f105d9d18",
@@ -6247,7 +6266,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "objects\/input2\/input2.yy",
+                "resourcePath": "objects\/input\/input.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7058,7 +7077,8 @@
         "1a480976-f014-4329-ad28-31d24d2d0902",
         "6496a460-32ba-4b72-92a9-003de934a66d",
         "ccec448d-69d5-4d70-b4bd-21215704aa46",
-        "115ba83b-a2af-4698-a10a-0f28e95374f4"
+        "115ba83b-a2af-4698-a10a-0f28e95374f4",
+        "ca8af802-3134-4aa1-a144-614f4ceeef7d"
     ],
     "tutorial": ""
 }

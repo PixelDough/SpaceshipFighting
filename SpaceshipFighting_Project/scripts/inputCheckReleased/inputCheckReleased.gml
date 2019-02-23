@@ -17,7 +17,7 @@ if _playerNum == -1 {
 // Keyboard Input
 if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 	
-	return keyboard_check(_controlArray[_input])
+	return keyboard_check_released(_controlArray[_input]);
 	
 }
 
@@ -26,7 +26,7 @@ if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 // Controller Input
 if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	
-	return gamepad_button_check(global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE], _controlArray[_input])
+	return gamepad_button_check_released(global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE], _controlArray[_input]);
 	
 }
 

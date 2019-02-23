@@ -8,7 +8,7 @@ draw_set_valign(fa_center);
 draw_text_outlined(room_width/2, room_height/4, "SPACE OUT", c_white, c_black, 4, 4, sin(global.time/15)*1);
 
 if TITLE_STATE == TITLE_STATES.TITLE {
-	if inputCheck(-1, INPUT.A, INPUT_STATE.PRESSED) {
+	if inputCheckPressed(0, INPUT.A, inputCreate(0)) {
 		alarm[0] = title_to_menu_time;
 		TweenFire(id, EaseOutElastic, 0, false, 0, title_to_menu_time, "title_press_scale", 0.5, 1.0);
 	}
@@ -23,7 +23,7 @@ if TITLE_STATE == TITLE_STATES.TITLE {
 
 if TITLE_STATE == TITLE_STATES.MENU {
 	var _current_sel = MENU_SEL;
-	MENU_SEL = clamp(MENU_SEL + inputCheck(-1, INPUT.DOWN, INPUT_STATE.PRESSED) - inputCheck(-1, INPUT.UP, INPUT_STATE.PRESSED), 0, array_length_1d(MENU_VARS)-1);
+	MENU_SEL = clamp(MENU_SEL + inputCheckPressed(0, INPUT.DOWN, inputCreate(0)) - inputCheckPressed(0, INPUT.UP, inputCreate(0)), 0, array_length_1d(MENU_VARS)-1);
 	
 	for (var _i=0; _i<array_length_1d(MENU_VARS); _i++) {
 		var _vars = MENU_VARS[_i];
@@ -34,7 +34,7 @@ if TITLE_STATE == TITLE_STATES.MENU {
 			
 			_col = c_aqua
 			
-			if inputCheck(-1, INPUT.A, INPUT_STATE.PRESSED) and _vars[2] != noone {
+			if inputCheckPressed(0, INPUT.A, inputCreate(0)) and _vars[2] != noone {
 				script_execute(_vars[2]);
 			}
 			

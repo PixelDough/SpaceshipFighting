@@ -13,3 +13,4 @@ How to handle multiple inputs
 - Array for storing 
 
 global.playerData[InputSource, Ship]
+inputCheck(InputSource, Input)

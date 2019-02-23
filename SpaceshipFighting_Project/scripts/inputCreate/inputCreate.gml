@@ -4,8 +4,11 @@ var _playerNum = argument0;
 
 var _inputArray = []
 
+if !variable_global_exists("playerData")
+	return false;
+
 // Keyboard Input
-if global.playerData[_playerNum] == -1 {
+if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 	
 	_inputArray[INPUT.UP] = vk_up;
 	_inputArray[INPUT.DOWN] = vk_down;
@@ -31,7 +34,7 @@ if global.playerData[_playerNum] == -1 {
 
 
 // Controller Input
-if global.playerData[_playerNum] >= 0 {
+if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	
 	_inputArray[INPUT.UP] = gp_padu;
 	_inputArray[INPUT.DOWN] = gp_padd;

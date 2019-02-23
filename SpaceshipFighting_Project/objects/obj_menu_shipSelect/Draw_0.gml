@@ -23,10 +23,10 @@ for (var _r=0; _r<4; _r++) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
 	
-	if global.playerCount <= _r {
+	if _r >= global.playerCount {
 		draw_text_outlined(_x, _y, "PRESS\nSTART", c_white, c_black, 1, 1, 0)
 	} else {
-		var _dir = inputCheck(-1, INPUT.RIGHT, INPUT_STATE.PRESSED) - inputCheck(-1, INPUT.LEFT, INPUT_STATE.PRESSED);
+		var _dir = inputCheckPressed(_r, INPUT.RIGHT, inputCreate(_r)) - inputCheckPressed(_r, INPUT.LEFT, inputCreate(_r));
 		if _dir != 0 {
 			global.playerData[_r, PLAYER_DATA.SHIP] += _dir;
 			if global.playerData[_r, PLAYER_DATA.SHIP] < 0

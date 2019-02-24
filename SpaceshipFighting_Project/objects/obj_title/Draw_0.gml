@@ -1,4 +1,6 @@
 
+newInputListen();
+
 draw_sprite_ext(spr_planet1_big, 0, room_width/2, room_height+256, 1, 1, global.time/30, c_white, 1);
 
 draw_set_font(global.font_big);

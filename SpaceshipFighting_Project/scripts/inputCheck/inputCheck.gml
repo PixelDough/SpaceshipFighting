@@ -6,13 +6,8 @@ var _playerNum = argument0;
 var _input = argument1;
 var _controlArray = argument2;
 
-if _playerNum == -1 {
-	
-	// Check for input from any source
-	
+if global.playerCount <= 0
 	return false;
-	
-}
 
 // Keyboard Input
 if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {

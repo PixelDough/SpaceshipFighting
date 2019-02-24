@@ -4,10 +4,10 @@ singleton();
 enabled = true;
 
 enum INPUT {
-	UP,
-	DOWN,
 	LEFT,
 	RIGHT,
+	UP,
+	DOWN,
 	
 	A,
 	B,

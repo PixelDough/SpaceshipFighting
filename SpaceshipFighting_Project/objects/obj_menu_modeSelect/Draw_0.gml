@@ -8,6 +8,8 @@ for (var _i=0; _i<_size; _i++) {
 	
 	var _y = (room_height/2) + (((_i*2)-1)*80)
 	
+	draw_set_halign(fa_center);
+	
 	var _col = c_black
 	var _col2 = c_dkgray
 	
@@ -36,7 +38,7 @@ for (var _i=0; _i<_size; _i++) {
 	
 	// Draw menu text
 	draw_set_valign(fa_center);
-	draw_text_outlined((room_width/2)-128, _y, _this[MODES_ARR.STRING], _col, _col2, _this[MODES_ARR.SCALE], _this[MODES_ARR.SCALE], 0);
+	draw_text_outlined((room_width/2)-128, _y, _this[MODES_ARR.STRING], _col, _col2, _this[MODES_ARR.SCALE]+1, _this[MODES_ARR.SCALE]+1, 0);
 	
 	MENU_MODES[_i] = _this;
 	

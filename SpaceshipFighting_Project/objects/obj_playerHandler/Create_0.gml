@@ -8,6 +8,7 @@ global.playerCount = 0;
 enum PLAYER_DATA {
 	INPUT_SOURCE,
 	SHIP,
+	READY,
 }
 
 global.ships = [
@@ -24,5 +25,3 @@ global.ships = [
 global.playerData = [];
 //global.playerData[0, PLAYER_DATA.SHIP] = global.ships[irandom(array_length_1d(global.ships)-1)];
 //global.playerData[1, PLAYER_DATA.SHIP] = global.ships[irandom(array_length_1d(global.ships)-1)];
-
-playerAdd(-1);

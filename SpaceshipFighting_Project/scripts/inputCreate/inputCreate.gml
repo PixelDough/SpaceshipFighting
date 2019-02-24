@@ -4,16 +4,19 @@ var _playerNum = argument0;
 
 var _inputArray = []
 
+if global.playerCount <= 0
+	return false;
+
 if !variable_global_exists("playerData")
 	return false;
 
 // Keyboard Input
 if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 	
-	_inputArray[INPUT.UP] = vk_up;
-	_inputArray[INPUT.DOWN] = vk_down;
 	_inputArray[INPUT.LEFT] = vk_left;
 	_inputArray[INPUT.RIGHT] = vk_right;
+	_inputArray[INPUT.UP] = vk_up;
+	_inputArray[INPUT.DOWN] = vk_down;
 	
 	_inputArray[INPUT.A] = ord("X");
 	_inputArray[INPUT.B] = ord("Z");
@@ -36,10 +39,10 @@ if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 // Controller Input
 if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	
-	_inputArray[INPUT.UP] = gp_padu;
-	_inputArray[INPUT.DOWN] = gp_padd;
 	_inputArray[INPUT.LEFT] = gp_padl;
 	_inputArray[INPUT.RIGHT] = gp_padr;
+	_inputArray[INPUT.UP] = gp_padu;
+	_inputArray[INPUT.DOWN] = gp_padd;
 	
 	_inputArray[INPUT.A] = gp_face1;
 	_inputArray[INPUT.B] = gp_face2;

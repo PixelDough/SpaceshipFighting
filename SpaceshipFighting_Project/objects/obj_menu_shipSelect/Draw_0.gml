@@ -83,8 +83,8 @@ for (var _r=0; _r<4; _r++) {
 		draw_sprite_ext(object_get_sprite(global.ships[global.playerData[_r, PLAYER_DATA.SHIP]]), 0, _x+shipXOff[_r], _y, shipScale[_r], shipScale[_r], shipRot[_r], c_white, 1)
 		
 		// Draw arrows on bottom
-		draw_sprite_ext(spr_arrows, 2, _x-32 - (arrowL[_r]*16), _y+128, arrowL[_r], arrowL[_r], 0, c_white, 1)
-		draw_sprite_ext(spr_arrows, 0, _x+32 + (arrowR[_r]*16), _y+128, arrowR[_r], arrowR[_r], 0, c_white, 1)
+		draw_sprite_ext(spr_arrows, 2, _x-16 - (arrowL[_r]*16), _y+128, arrowL[_r], arrowL[_r], 0, c_white, 1)
+		draw_sprite_ext(spr_arrows, 0, _x+16 + (arrowR[_r]*16), _y+128, arrowR[_r], arrowR[_r], 0, c_white, 1)
 		
 		if playerReady[_r] {
 			arrowL[_r] = lerp(arrowL[_r], 0, 0.2);

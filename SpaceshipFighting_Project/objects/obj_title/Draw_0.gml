@@ -30,11 +30,13 @@ if TITLE_STATE == TITLE_STATES.MENU {
 	for (var _i=0; _i<array_length_1d(MENU_VARS); _i++) {
 		var _vars = MENU_VARS[_i];
 		
-		var _col = c_teal;
+		var _col = c_black;
+		var _col2 = c_dkgray;
 		if _i == MENU_SEL {
 			_vars[1] = lerp(_vars[1], 1.5, 0.25);
 			
-			_col = c_aqua
+			_col = c_white
+			_col2 = c_black
 			
 			if inputCheckPressed(0, INPUT.A, inputCreate(0)) and _vars[2] != noone {
 				script_execute(_vars[2]);
@@ -46,7 +48,7 @@ if TITLE_STATE == TITLE_STATES.MENU {
 		
 		var _float = sin((global.time/10));
 		
-		draw_text_outlined(room_width/2, room_height/2 + _i*(string_height(_vars[0])*2) + _float, _vars[0], _col, c_black, _vars[1], _vars[1], 0)
+		draw_text_outlined(room_width/2, room_height/2 + _i*(string_height(_vars[0])*2) + _float, _vars[0], _col, _col2, _vars[1], _vars[1], 0)
 		
 		MENU_VARS[_i] = _vars;
 	}

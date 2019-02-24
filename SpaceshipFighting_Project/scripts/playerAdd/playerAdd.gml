@@ -3,6 +3,8 @@
 
 var _inputSource = argument0;
 
+ds_grid_create(0,0)
+
 with obj_playerHandler {
 	
 	global.playerData[global.playerCount, PLAYER_DATA.INPUT_SOURCE] = _inputSource;

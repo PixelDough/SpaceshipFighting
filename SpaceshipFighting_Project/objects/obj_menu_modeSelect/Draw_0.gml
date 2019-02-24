@@ -43,3 +43,6 @@ for (var _i=0; _i<_size; _i++) {
 	MENU_MODES[_i] = _this;
 	
 }
+
+if inputCheckPressed(0, INPUT.B, inputCreate(0))
+	room_change_swipe(rm_title)

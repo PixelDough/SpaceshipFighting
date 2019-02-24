@@ -426,7 +426,7 @@
             "Key": "26fee5a2-30ed-444c-ad42-e575f22abfc9",
             "Value": {
                 "id": "32000f2b-7e0b-4cd4-b2f7-b88cb7294d66",
-                "resourcePath": "rooms\/title\/title.yy",
+                "resourcePath": "rooms\\rm_title\\rm_title.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1811,6 +1811,14 @@
             "Value": {
                 "id": "5912936c-619c-43d3-99b8-86e0c686d38a",
                 "resourcePath": "scripts\/EaseInOutQuad\/EaseInOutQuad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a015a2af-ae37-4e6c-afde-d3a6ae59d26a",
+            "Value": {
+                "id": "0831811a-be26-4dac-afbf-aa851ece1a33",
+                "resourcePath": "scripts\\ds_grid_delete_row\\ds_grid_delete_row.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3322,7 +3330,8 @@
         "08abb3bb-8087-4c0b-b529-a22b57b43c39",
         "6c6c507d-9daa-40b3-8284-72529f952c39",
         "5813da9b-a521-4d41-a744-381b3716a2c2",
-        "47e79235-e384-41a4-8732-b73d021a3af6"
+        "47e79235-e384-41a4-8732-b73d021a3af6",
+        "a015a2af-ae37-4e6c-afde-d3a6ae59d26a"
     ],
     "tutorial": ""
 }

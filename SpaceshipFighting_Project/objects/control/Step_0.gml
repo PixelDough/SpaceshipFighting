@@ -11,3 +11,6 @@ if keyboard_check_pressed(ord("R")) {
 	else
 		room_restart();
 }
+
+if keyboard_check(vk_shift) and keyboard_check_pressed(ord("D"))
+	global.debug = !global.debug

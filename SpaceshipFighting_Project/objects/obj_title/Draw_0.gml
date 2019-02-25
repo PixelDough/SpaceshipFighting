@@ -25,7 +25,12 @@ if TITLE_STATE == TITLE_STATES.TITLE {
 
 if TITLE_STATE == TITLE_STATES.MENU {
 	var _current_sel = MENU_SEL;
-	MENU_SEL = clamp(MENU_SEL + inputCheckPressed(0, INPUT.DOWN, inputCreate(0)) - inputCheckPressed(0, INPUT.UP, inputCreate(0)), 0, array_length_1d(MENU_VARS)-1);
+	var _input = inputCheckPressed(0, INPUT.DOWN, inputCreate(0)) - inputCheckPressed(0, INPUT.UP, inputCreate(0));
+	MENU_SEL = clamp(MENU_SEL + _input, 0, array_length_1d(MENU_VARS)-1);
+	
+	if MENU_SEL != _current_sel {
+		audio_play_sound(snd_ui_change, 100, false)
+	}
 	
 	for (var _i=0; _i<array_length_1d(MENU_VARS); _i++) {
 		var _vars = MENU_VARS[_i];

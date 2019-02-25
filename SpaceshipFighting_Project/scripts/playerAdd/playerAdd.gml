@@ -3,7 +3,7 @@
 
 var _inputSource = argument0;
 
-ds_grid_create(0,0)
+
 
 with obj_playerHandler {
 	

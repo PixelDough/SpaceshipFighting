@@ -71,3 +71,5 @@ select_pressed = array_create(4, false)
 
 //keyboard_set_map(ord("N"), ord("X"));
 //keyboard_set_map(ord("M"), ord("Z"));
+
+

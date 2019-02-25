@@ -1,8 +1,4 @@
 
-newInputListen();
-
-
-
 
 for (var _p=0; _p<array_length_1d(playerInputDevice); _p++) {
 	

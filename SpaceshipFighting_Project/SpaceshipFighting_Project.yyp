@@ -831,6 +831,14 @@
             }
         },
         {
+            "Key": "4a5fe2b0-4b43-43f6-9d94-ea5dbd720c62",
+            "Value": {
+                "id": "ea2e247a-ac68-4c64-a759-3f51c140250d",
+                "resourcePath": "sounds\\snd_shipSelect_deselect\\snd_shipSelect_deselect.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4a6750a7-b621-40a6-addf-c025ff0e9f69",
             "Value": {
                 "id": "910c7ce1-219b-43cf-afcd-2ef924ad2205",
@@ -879,6 +887,14 @@
             }
         },
         {
+            "Key": "4e9058f8-6320-48a0-94f9-bc2fd5a29a4f",
+            "Value": {
+                "id": "e2b034ae-56bf-43f5-8cdb-68b95b648239",
+                "resourcePath": "sounds\\snd_shipSelect_select\\snd_shipSelect_select.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4ec8dc57-81f2-4576-a898-df2e477c459d",
             "Value": {
                 "id": "6eab2f64-c2f0-45ec-9182-28b0ecf380a4",
@@ -891,6 +907,14 @@
             "Value": {
                 "id": "a5894c94-3408-4e97-9c9d-26d0072f4910",
                 "resourcePath": "scripts\/TweenIsPlaying\/TweenIsPlaying.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4fe0a74b-d281-4bad-bc05-b428859194d3",
+            "Value": {
+                "id": "30eb0815-568f-4cd5-a307-26666f206003",
+                "resourcePath": "scripts\\playerDelete\\playerDelete.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1743,14 +1767,6 @@
             }
         },
         {
-            "Key": "98fc1859-b922-4550-b050-fe2a4cb56257",
-            "Value": {
-                "id": "e5124917-538a-49b2-b502-89b924c13fbe",
-                "resourcePath": "notes\/compatibility_report_220219_1116511651.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "9a30a04e-0e9f-47d2-a84d-52bb06780b0c",
             "Value": {
                 "id": "8fb4fa6b-8f12-404e-a428-0abfb4e4c8da",
@@ -1791,6 +1807,14 @@
             }
         },
         {
+            "Key": "9cff7304-385c-4394-97bc-cf8146865aee",
+            "Value": {
+                "id": "f1538919-c281-4b18-8235-153b04592932",
+                "resourcePath": "sounds\\snd_shipSelect_readyToBattle\\snd_shipSelect_readyToBattle.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "9e456de1-c321-43d6-8cdb-ac58ce9deb9a",
             "Value": {
                 "id": "597337f4-7bf8-41b3-9bd6-54256366337a",
@@ -1811,14 +1835,6 @@
             "Value": {
                 "id": "5912936c-619c-43d3-99b8-86e0c686d38a",
                 "resourcePath": "scripts\/EaseInOutQuad\/EaseInOutQuad.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "a015a2af-ae37-4e6c-afde-d3a6ae59d26a",
-            "Value": {
-                "id": "0831811a-be26-4dac-afbf-aa851ece1a33",
-                "resourcePath": "scripts\\ds_grid_delete_row\\ds_grid_delete_row.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -2228,14 +2244,6 @@
                 "id": "0db5cefc-2ce0-45fc-b6ac-04118e144c3b",
                 "resourcePath": "objects\/obj_laser_neonx\/obj_laser_neonx.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "ba2e9079-7e92-43e0-80a4-068bfeefd409",
-            "Value": {
-                "id": "9e9f8095-3a02-4c7d-9278-12fb111676e1",
-                "resourcePath": "notes\/compatibility_report_120219_15000606.yy",
-                "resourceType": "GMNotes"
             }
         },
         {
@@ -2655,6 +2663,14 @@
             }
         },
         {
+            "Key": "dcd7acb5-bb36-4958-ac12-9da3d5b45714",
+            "Value": {
+                "id": "8698eb5f-c78a-47ad-bcee-c11841189b6f",
+                "resourcePath": "notes\\Credits.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "dcf443af-80fc-4cf5-a813-3512d22064c4",
             "Value": {
                 "id": "13b39132-e85a-43c1-891b-aff0604b6463",
@@ -2799,14 +2815,6 @@
             }
         },
         {
-            "Key": "e9500624-fb95-43db-b9b1-e75a51badf60",
-            "Value": {
-                "id": "27b39599-ee8c-4f30-a505-5e24bce2a139",
-                "resourcePath": "notes\/compatibility_report_100219_1511141114.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "ea3fd4a8-84a8-4f1d-98ac-ee434c048675",
             "Value": {
                 "id": "0b97c51a-558e-4811-a8e4-4c06aa848fa2",
@@ -2828,6 +2836,14 @@
                 "id": "db310fd0-4907-41c8-bd57-3e58b010ffe7",
                 "resourcePath": "views\/eb3c4d17-619e-416d-bc3e-020ef2fa84d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ebea4b36-0630-4795-bcca-4c8b58505ebf",
+            "Value": {
+                "id": "770017eb-7c2f-4458-8bf9-c1939088afff",
+                "resourcePath": "scripts\\array2d_delete_row\\array2d_delete_row.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2908,6 +2924,14 @@
                 "id": "0fe73326-388a-4c62-aef4-d39752bd9c6e",
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f448ab28-dbff-4592-ab62-9baa8ef81dad",
+            "Value": {
+                "id": "6ead4e23-51ba-45bc-a04c-aef089b8b2d4",
+                "resourcePath": "sounds\\snd_ui_change\\snd_ui_change.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3331,7 +3355,8 @@
         "6c6c507d-9daa-40b3-8284-72529f952c39",
         "5813da9b-a521-4d41-a744-381b3716a2c2",
         "47e79235-e384-41a4-8732-b73d021a3af6",
-        "a015a2af-ae37-4e6c-afde-d3a6ae59d26a"
+        "ebea4b36-0630-4795-bcca-4c8b58505ebf",
+        "4fe0a74b-d281-4bad-bc05-b428859194d3"
     ],
     "tutorial": ""
 }

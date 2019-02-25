@@ -1,9 +1,9 @@
 
 var _shipCount = array_length_1d(global.ships);
 
-for (var _i=0; _i<_shipCount; _i++) {
-	draw_sprite(spr_menu_ships, _i, 48 + (_i*48), 64);
-}
+//for (var _i=0; _i<_shipCount; _i++) {
+//	draw_sprite(spr_menu_ships, _i, 48 + (_i*48), 64);
+//}
 
 //if keyboard_check_pressed(vk_enter) {
 //	playerAdd();
@@ -11,7 +11,7 @@ for (var _i=0; _i<_shipCount; _i++) {
 
 var _shipsSelected = [];
 
-for (var _p=0; _p<array_height_2d(global.playerData)-1; _p++) {
+for (var _p=0; _p<array_height_2d(global.playerData); _p++) {
 	_shipsSelected[_p] = global.playerData[_p, PLAYER_DATA.SHIP];
 }
 
@@ -34,7 +34,7 @@ for (var _r=0; _r<4; _r++) {
 	
 	if _r >= global.playerCount {
 		draw_text_outlined(_x, _y, "PRESS\nSTART", c_white, c_black, 1, 1, 0)
-	} else {
+	} else if global.playerData[_r, PLAYER_DATA.INPUT_SOURCE] != noone {
 		if !playerReady[_r] {
 			allReady = false;
 			var _dir = inputCheckPressed(_r, INPUT.RIGHT, inputCreate(_r)) - inputCheckPressed(_r, INPUT.LEFT, inputCreate(_r));
@@ -60,22 +60,9 @@ for (var _r=0; _r<4; _r++) {
 			// Select ship
 			if inputCheckPressed(_r, INPUT.A, inputCreate(_r)) {
 				playerReady[_r] = true;
+				audio_play_sound(snd_shipSelect_select, 100, false);
 				TweenFire(id, EaseInBack, 0, false, 0, 15, TPArray(buttonA, _r), 1, 0);
 				TweenFire(id, EaseInOutBack, 0, false, 0, 15, TPArray(shipScale, _r), 2, 3);
-			}
-		}
-		
-		if inputCheckPressed(_r, INPUT.B, inputCreate(_r)) {
-			if playerReady[_r] == true {
-				playerReady[_r] = false
-				TweenFire(id, EaseOutBack, 0, false, 0, 15, TPArray(buttonA, _r), 0, 1);
-				TweenFire(id, EaseInOutBack, 0, false, 0, 15, TPArray(shipScale, _r), 3, 2);
-			} else {
-				if _r == 0 {
-					room_change_swipe(rm_modeSelect);
-				} else {
-						
-				}
 			}
 		}
 		
@@ -97,17 +84,42 @@ for (var _r=0; _r<4; _r++) {
 		// Draw A button
 		draw_sprite_ext(spr_hud_icons_controller, INPUT.A, _x, _y+128, buttonA[_r], buttonA[_r], 0, c_white, 1)
 		
+		if inputCheckPressed(_r, INPUT.B, inputCreate(_r)) {
+			if playerReady[_r] == true {
+				playerReady[_r] = false
+				audio_play_sound(snd_shipSelect_deselect, 100, false);
+				TweenFire(id, EaseOutBack, 0, false, 0, 15, TPArray(buttonA, _r), 0, 1);
+				TweenFire(id, EaseInOutBack, 0, false, 0, 15, TPArray(shipScale, _r), 3, 2);
+			} else {
+				if _r == 0 {
+					room_change_swipe(rm_modeSelect);
+				} else {
+					playerDelete(_r)
+				}
+			}
+		}
+		
 	}
 	
 }
 
+if global.playerCount < 2
+	allReady = false;
 
 if allReady {
 	if startScale == 0 {
+		audio_play_sound(snd_shipSelect_readyToBattle, 100, false);
 		TweenFire(id, EaseOutElastic, 0, false, 0, 45, "startScale", startScale, 2)
 	}
 	draw_text_outlined(room_width/2, room_height-32, "[START] BATTLE", c_white, c_black, startScale, startScale, 0)
+	// Start game
+	if inputCheckPressed(0, INPUT.START, inputCreate(0)) {
+		room_change_swipe(room0)
+	}
 } else {
 	startScale = 0;
 }
 
+draw_text_outlined(room_width/2, 32, "BATTLE MODE", c_white, c_black, 2, 2, 0)
+
+newInputListen();

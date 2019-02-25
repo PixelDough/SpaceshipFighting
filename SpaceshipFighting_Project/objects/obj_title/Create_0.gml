@@ -41,4 +41,4 @@ MENU_VARS[TITLE.QUIT] = [
 ]
 
 audio_stop_all();
-audio_play_sound(mus_title, 100, true)
+//audio_play_sound(mus_title, 100, true)

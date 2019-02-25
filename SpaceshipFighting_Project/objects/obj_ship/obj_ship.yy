@@ -113,6 +113,20 @@
             "value": "5",
             "varName": "life_max",
             "varType": 1
+        },
+        {
+            "id": "7176a374-da5f-4fa5-8177-efcdb9de003d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "Orion",
+            "varName": "name",
+            "varType": 2
         }
     ],
     "solid": false,

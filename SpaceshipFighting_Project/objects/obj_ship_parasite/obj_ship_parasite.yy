@@ -17,28 +17,20 @@
             "value": "obj_laser_neonx"
         },
         {
-            "id": "8ea1991c-c732-4880-b753-c5697b4817e4",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
-            "propertyId": "aac86a7c-7948-4535-9223-4ecf68d31659",
-            "value": "5"
-        },
-        {
-            "id": "b40038a6-f0c0-418f-935c-5b5c2091fd5d",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
-            "propertyId": "5a745da6-afbb-490b-913e-b302b61cf0d3",
-            "value": "7"
-        },
-        {
             "id": "6994e86a-773f-4cad-a492-06e2fbaf1c0e",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
             "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
             "propertyId": "7b0e8512-29e6-434c-a89d-6536fbfaa1ac",
             "value": "4"
+        },
+        {
+            "id": "08b07169-b845-4145-b0fd-0c2bec23b9ff",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "7176a374-da5f-4fa5-8177-efcdb9de003d",
+            "value": "Parasite"
         }
     ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",

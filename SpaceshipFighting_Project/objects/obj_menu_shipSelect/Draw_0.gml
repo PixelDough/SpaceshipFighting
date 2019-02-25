@@ -69,6 +69,9 @@ for (var _r=0; _r<4; _r++) {
 		// Draw current selected ship
 		draw_sprite_ext(object_get_sprite(global.ships[global.playerData[_r, PLAYER_DATA.SHIP]]), 0, _x+shipXOff[_r], _y, shipScale[_r], shipScale[_r], shipRot[_r], c_white, 1)
 		
+		// Draw ship name
+		draw_text_outlined(_x, _y-128, "SHIP " + string(global.playerData[_r, PLAYER_DATA.SHIP] + 1), c_white, c_black, 1, 1, 0)
+		
 		// Draw arrows on bottom
 		draw_sprite_ext(spr_arrows, 2, _x-16 - (arrowL[_r]*16), _y+128, arrowL[_r], arrowL[_r], 0, c_white, 1)
 		draw_sprite_ext(spr_arrows, 0, _x+16 + (arrowR[_r]*16), _y+128, arrowR[_r], arrowR[_r], 0, c_white, 1)

@@ -7,7 +7,16 @@
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
-    "overriddenProperties": null,
+    "overriddenProperties": [
+        {
+            "id": "fa9a20ed-5325-4ee6-87da-70d661a7f3d0",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "7176a374-da5f-4fa5-8177-efcdb9de003d",
+            "value": "Alethia"
+        }
+    ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
     "persistent": false,
     "physicsAngularDamping": 0.1,
@@ -23,48 +32,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "72604d5a-4923-4cb1-a174-7fc3739b0da4",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "obj_laser",
-            "varName": "laser_type",
-            "varType": 5
-        },
-        {
-            "id": "91947d45-3077-4a12-b3c6-61105428e6c1",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": true,
-            "rangeMax": 3,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "player_num",
-            "varType": 1
-        },
-        {
-            "id": "2830d906-d700-4403-a8d0-89cfabe0d547",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": true,
-            "rangeMax": 10,
-            "rangeMin": 1,
-            "resourceFilter": 1023,
-            "value": "5",
-            "varName": "life_max",
-            "varType": 1
-        }
+        
     ],
     "solid": false,
     "spriteId": "d01458fd-78c7-423b-923c-dfae689aacc1",

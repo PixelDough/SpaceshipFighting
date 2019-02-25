@@ -31,12 +31,21 @@ if inputCheck(player_num, INPUT.B, inputCreate(player_num)) {
 		instance_destroy(shield);
 	}
 	shield = noone;
-	if inputCheck(player_num, INPUT.X, inputCreate(player_num)) and alarm[0] <= 0 {
-		var _laser = instance_create_depth(x, y, depth+10, laser_type);
-		_laser.height = height;
-		_laser.dir = dir;
-		alarm[0] = 15;
+	
+	// Shoot Laser
+	//if inputCheck(player_num, INPUT.X, inputCreate(player_num)) and alarm[0] <= 0 {
+	//	var _laser = instance_create_depth(x, y, depth+10, laser_type);
+	//	_laser.height = height;
+	//	_laser.dir = dir;
+	//	alarm[0] = 15;
+	//}
+	
+	// Punch
+	if inputCheckPressed(player_num, INPUT.X, inputCreate(player_num)) and gloveDistance <= 0 {
+		gloveState = 1;
+		TweenFire(id, EaseOutBack, 1, false, 0, 15, "gloveDistance", 0, 64);
 	}
+	
 }
 
 self_loop();

@@ -11,3 +11,6 @@ height = 24;
 shield = noone;
 
 life = life_max;
+
+gloveDistance = 0;
+gloveState = 0;

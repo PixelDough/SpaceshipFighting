@@ -109,7 +109,7 @@ for (var _r=0; _r<4; _r++) {
 if global.playerCount < 2
 	allReady = false;
 
-if allReady {
+if allReady or global.debug {
 	if startScale == 0 {
 		audio_play_sound(snd_shipSelect_readyToBattle, 100, false);
 		TweenFire(id, EaseOutElastic, 0, false, 0, 45, "startScale", startScale, 2)

@@ -8,5 +8,6 @@ if x1 <= 0 and room != target {
 }
 if x2 <= 0 {
 	input.enabled = true;
+	global.inputEnabled = true;
 	instance_destroy();
 }

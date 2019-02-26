@@ -8,7 +8,7 @@ var _controlArray = argument2;
 
 var _list = global.playerData[| _playerNum];
 
-if ds_list_empty(global.playerData)
+if ds_list_empty(global.playerData) or !global.inputEnabled
 	return false;
 
 // Keyboard Input

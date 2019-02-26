@@ -11,3 +11,4 @@ audio_stop_all();
 TweenFire(id, EaseOutCubic, 0, false, 0, 30, "x1", room_width, -1)
 
 input.enabled = false;
+global.inputEnabled = false;

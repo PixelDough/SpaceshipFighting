@@ -11,14 +11,18 @@ var _shipCount = array_length_1d(global.ships);
 
 var _shipsSelected = [];
 
-for (var _p=0; _p<array_height_2d(global.playerData); _p++) {
-	_shipsSelected[_p] = global.playerData[_p, PLAYER_DATA.SHIP];
+var _listHeight = ds_list_size(global.playerData);
+
+for (var _p=0; _p<_listHeight; _p++) {
+	var _arr = global.playerData[| _p];
+	_shipsSelected[_p] = _arr[PLAYER_DATA.SHIP];
 }
 
 
 allReady = true;
 
 for (var _r=0; _r<4; _r++) {
+	
 	draw_set_color(c_white);
 	
 	var _x = 96 + (_r*room_width/4);
@@ -32,9 +36,10 @@ for (var _r=0; _r<4; _r++) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
 	
-	if _r >= global.playerCount {
+	if _r >= _listHeight {
 		draw_text_outlined(_x, _y, "PRESS\nSTART", c_white, c_black, 1, 1, 0)
-	} else if global.playerData[_r, PLAYER_DATA.INPUT_SOURCE] != noone {
+	} else {
+		var _arr = global.playerData[| _r];
 		if !playerReady[_r] {
 			allReady = false;
 			var _dir = inputCheckPressed(_r, INPUT.RIGHT, inputCreate(_r)) - inputCheckPressed(_r, INPUT.LEFT, inputCreate(_r));
@@ -50,10 +55,10 @@ for (var _r=0; _r<4; _r++) {
 				TweenFire(id, EaseOutElastic, 0, false, 0, 60, TPArray(shipRot, _r), 90+(45*-sign(_dir)), 90);
 				TweenFire(id, EaseOutBack, 0, false, 0, 30, TPArray(shipXOff, _r), 16*sign(_dir), 0);
 				
-				global.playerData[_r, PLAYER_DATA.SHIP] = loopVal(global.playerData[_r, PLAYER_DATA.SHIP]+_dir, 0, array_length_1d(global.ships)-1);
+				_arr[@ PLAYER_DATA.SHIP] = loopVal(_arr[@ PLAYER_DATA.SHIP]+_dir, 0, array_length_1d(global.ships)-1);
 			
-				while(checkArrayFor(_shipsSelected, global.playerData[_r, PLAYER_DATA.SHIP]))
-					global.playerData[_r, PLAYER_DATA.SHIP] = loopVal(global.playerData[_r, PLAYER_DATA.SHIP]+_dir, 0, array_length_1d(global.ships)-1);
+				while(checkArrayFor(_shipsSelected, _arr[@ PLAYER_DATA.SHIP]))
+					_arr[@ PLAYER_DATA.SHIP] = loopVal(_arr[@ PLAYER_DATA.SHIP]+_dir, 0, array_length_1d(global.ships)-1);
 			
 			}
 			
@@ -67,10 +72,10 @@ for (var _r=0; _r<4; _r++) {
 		}
 		
 		// Draw current selected ship
-		draw_sprite_ext(object_get_sprite(global.ships[global.playerData[_r, PLAYER_DATA.SHIP]]), 0, _x+shipXOff[_r], _y, shipScale[_r], shipScale[_r], shipRot[_r], c_white, 1)
+		draw_sprite_ext(object_get_sprite(global.ships[_arr[@ PLAYER_DATA.SHIP]]), 0, _x+shipXOff[_r], _y, shipScale[_r], shipScale[_r], shipRot[_r], c_white, 1)
 		
 		// Draw ship name
-		draw_text_outlined(_x, _y-128, "SHIP " + string(global.playerData[_r, PLAYER_DATA.SHIP] + 1), c_white, c_black, 1, 1, 0)
+		draw_text_outlined(_x, _y-128, "SHIP " + string(_arr[@ PLAYER_DATA.SHIP] + 1), c_white, c_black, 1, 1, 0)
 		
 		// Draw arrows on bottom
 		draw_sprite_ext(spr_arrows, 2, _x-16 - (arrowL[_r]*16), _y+128, arrowL[_r], arrowL[_r], 0, c_white, 1)
@@ -98,6 +103,7 @@ for (var _r=0; _r<4; _r++) {
 					room_change_swipe(rm_modeSelect);
 				} else {
 					playerDelete(_r)
+					exit;
 				}
 			}
 		}
@@ -106,7 +112,7 @@ for (var _r=0; _r<4; _r++) {
 	
 }
 
-if global.playerCount < 2
+if _listHeight < 2
 	allReady = false;
 
 if allReady or global.debug {

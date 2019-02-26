@@ -6,11 +6,13 @@ var _playerNum = argument0;
 var _input = argument1;
 var _controlArray = argument2;
 
-if global.playerCount <= 0
+var _list = global.playerData[| _playerNum];
+
+if ds_list_empty(global.playerData)
 	return false;
 
 // Keyboard Input
-if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
+if _list[PLAYER_DATA.INPUT_SOURCE] <= -1 {
 	
 	return keyboard_check_released(_controlArray[_input]);
 	
@@ -19,9 +21,9 @@ if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 
 
 // Controller Input
-if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
+if _list[PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	
-	return gamepad_button_check_released(global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE], _controlArray[_input]);
+	return gamepad_button_check_released(_list[PLAYER_DATA.INPUT_SOURCE], _controlArray[_input]);
 	
 }
 

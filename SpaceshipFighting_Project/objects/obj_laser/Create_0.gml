@@ -11,3 +11,5 @@ enum LASER {
 	DIE
 }
 ACTION = LASER.MOVE;
+
+creator = noone;

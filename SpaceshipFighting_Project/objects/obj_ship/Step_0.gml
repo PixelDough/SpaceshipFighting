@@ -33,19 +33,29 @@ if inputCheck(player_num, INPUT.B, inputCreate(player_num)) {
 	shield = noone;
 	
 	// Shoot Laser
-	//if inputCheck(player_num, INPUT.X, inputCreate(player_num)) and alarm[0] <= 0 {
-	//	var _laser = instance_create_depth(x, y, depth+10, laser_type);
-	//	_laser.height = height;
-	//	_laser.dir = dir;
-	//	alarm[0] = 15;
-	//}
-	
-	// Punch
-	if inputCheckPressed(player_num, INPUT.X, inputCreate(player_num)) and gloveDistance <= 0 {
-		gloveState = 1;
-		TweenFire(id, EaseOutBack, 1, false, 0, 15, "gloveDistance", 0, 64);
+	if inputCheck(player_num, INPUT.X, inputCreate(player_num)) and alarm[0] <= 0 {
+		var _laser = instance_create_depth(x, y, depth+10, laser_type);
+		_laser.creator = id;
+		_laser.height = height;
+		_laser.dir = dir;
+		alarm[0] = 15;
 	}
 	
+	// Punch
+	//if inputCheckPressed(player_num, INPUT.X, inputCreate(player_num)) and gloveDistance <= 0 {
+	//	gloveState = 1;
+	//	TweenFire(id, EaseOutBack, 1, false, 0, 15, "gloveDistance", 0, 128);
+	//	var _laser = instance_create_depth(x, y, depth, laser_type);
+	//	_laser.image_xscale = 3;
+	//	_laser.image_yscale = 3;
+	//	_laser.dir = dir;
+	//}
+	
+}
+
+if inputCheckPressed(player_num, INPUT.ZR, inputCreate(player_num)) {
+	hspeed = lengthdir_x(speed_max, dir);
+	vspeed = lengthdir_y(speed_max, dir);
 }
 
 self_loop();

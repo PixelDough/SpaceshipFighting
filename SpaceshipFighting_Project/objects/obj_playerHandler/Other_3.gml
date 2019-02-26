@@ -1,2 +1,2 @@
 
-//ds_grid_destroy(global.playerData);
+ds_list_destroy(global.playerData);

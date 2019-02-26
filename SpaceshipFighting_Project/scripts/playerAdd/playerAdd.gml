@@ -7,10 +7,15 @@ var _inputSource = argument0;
 
 with obj_playerHandler {
 	
-	global.playerData[global.playerCount, PLAYER_DATA.INPUT_SOURCE] = _inputSource;
-	global.playerData[global.playerCount, PLAYER_DATA.SHIP] = global.playerCount;
-	global.playerData[global.playerCount, PLAYER_DATA.READY] = false;
+	var _newPlayerArray = []
 	
-	global.playerCount++;
+	var _height = ds_list_size(global.playerData)
+	
+	_newPlayerArray[PLAYER_DATA.INPUT_SOURCE] = _inputSource;
+	_newPlayerArray[PLAYER_DATA.SHIP] = _height;
+	_newPlayerArray[PLAYER_DATA.SCORE] = 0;
+	
+	ds_list_add(global.playerData, _newPlayerArray)
+	
 	
 }

@@ -4,20 +4,16 @@ with input {
 	    if scr_buttonPressed(i) {  
 		
 			var _addDevice = true;
-			for (var _dd=0; _dd<array_length_1d(playerInputDevice); _dd++) {
-				if playerInputDevice[_dd] == i {
+			
+			for (var _dd=0; _dd<ds_list_size(global.playerData); _dd++) {
+				var _list = global.playerData[| _dd]
+				if _list[@ PLAYER_DATA.INPUT_SOURCE] == i {
 					_addDevice = false;
 				}
 			}
 		
 			if _addDevice {
-				for (var _d=0; _d<array_length_1d(playerInputDevice); _d++) {
-					if playerInputDevice[_d] == noone {
-						playerInputDevice[_d] = i;
-						playerAdd(i);
-						break;
-					}
-				}
+				playerAdd(i)
 			}
 		
 			/*
@@ -32,20 +28,15 @@ with input {
 
 	if keyboard_check_pressed(vk_enter) {
 		var _addDevice = true;
-		for (var _dd=0; _dd<array_length_1d(playerInputDevice); _dd++) {
-			if playerInputDevice[_dd] == -1 {
+		for (var _dd=0; _dd<ds_list_size(global.playerData); _dd++) {
+			var _list = global.playerData[| _dd]
+			if _list[@ PLAYER_DATA.INPUT_SOURCE] == -1 {
 				_addDevice = false;
 			}
 		}
 		
 		if _addDevice {
-			for (var _d=0; _d<array_length_1d(playerInputDevice); _d++) {
-				if playerInputDevice[_d] == noone {
-					playerInputDevice[_d] = -1;
-					playerAdd(-1);
-					break;
-				}
-			}
+			playerAdd(-1)
 		}
 	}
 }

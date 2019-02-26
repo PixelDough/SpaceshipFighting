@@ -2,13 +2,10 @@
 if !singleton()
 	exit;
 
-
-global.playerCount = 0;
-
 enum PLAYER_DATA {
 	INPUT_SOURCE,
 	SHIP,
-	READY,
+	SCORE,
 }
 
 global.ships = [
@@ -22,7 +19,7 @@ global.ships = [
 	obj_ship_parasite
 ]
 
-global.playerData = [];
+global.playerData = ds_list_create();
 
 //global.playerData[0, PLAYER_DATA.SHIP] = global.ships[irandom(array_length_1d(global.ships)-1)];
 //global.playerData[1, PLAYER_DATA.SHIP] = global.ships[irandom(array_length_1d(global.ships)-1)];

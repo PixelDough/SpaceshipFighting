@@ -4,14 +4,16 @@ var _playerNum = argument0;
 
 var _inputArray = []
 
-if global.playerCount <= 0
-	return false;
+var _list = global.playerData[| _playerNum];
 
 if !variable_global_exists("playerData")
 	return false;
 
+if ds_list_size(global.playerData) <= 0
+	return false;
+
 // Keyboard Input
-if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
+if _list[PLAYER_DATA.INPUT_SOURCE] <= -1 {
 	
 	_inputArray[INPUT.LEFT] = vk_left;
 	_inputArray[INPUT.RIGHT] = vk_right;
@@ -37,7 +39,7 @@ if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] <= -1 {
 
 
 // Controller Input
-if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
+if _list[PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	
 	_inputArray[INPUT.LEFT] = gp_padl;
 	_inputArray[INPUT.RIGHT] = gp_padr;
@@ -49,11 +51,11 @@ if global.playerData[_playerNum, PLAYER_DATA.INPUT_SOURCE] >= 0 {
 	_inputArray[INPUT.X] = gp_face3;
 	_inputArray[INPUT.Y] = gp_face4;
 	
-	_inputArray[INPUT.L] = gp_shoulderlb;
-	_inputArray[INPUT.R] = gp_shoulderrb;
+	_inputArray[INPUT.L] = gp_shoulderl;
+	_inputArray[INPUT.R] = gp_shoulderr;
 	
-	_inputArray[INPUT.ZL] = gp_shoulderl;
-	_inputArray[INPUT.ZR] = gp_shoulderr;
+	_inputArray[INPUT.ZL] = gp_shoulderlb;
+	_inputArray[INPUT.ZR] = gp_shoulderrb;
 	
 	_inputArray[INPUT.START] = gp_start;
 	_inputArray[INPUT.SELECT] = gp_select;

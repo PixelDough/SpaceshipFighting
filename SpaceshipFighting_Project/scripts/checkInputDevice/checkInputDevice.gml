@@ -2,7 +2,12 @@
 
 var _player = argument0;
 
-var _device = playerInputDevice[_player];
+var _list = global.playerData[| _player];
+
+if !is_array(_list)
+	return false;
+
+var _device = _list[PLAYER_DATA.INPUT_SOURCE];
 
 if _device >= 0 {
 	

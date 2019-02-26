@@ -17,14 +17,6 @@
             "value": "obj_laser_neonx"
         },
         {
-            "id": "6994e86a-773f-4cad-a492-06e2fbaf1c0e",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
-            "propertyId": "7b0e8512-29e6-434c-a89d-6536fbfaa1ac",
-            "value": "4"
-        },
-        {
             "id": "08b07169-b845-4145-b0fd-0c2bec23b9ff",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",

@@ -13,3 +13,6 @@ enum LASER {
 ACTION = LASER.MOVE;
 
 creator = noone;
+
+audio_stop_sound(snd_shoot)
+audio_play_sound(snd_shoot, 100, false)

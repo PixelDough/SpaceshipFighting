@@ -1,10 +1,12 @@
 
 depth = -bbox_top;
 
+//make_trail(2, 5);
+
 if inputCheck(player_num, INPUT.A, inputCreate(player_num)) {
 	//speed = clamp(speed+0.25, 0, 5);
-	hspeed = clamp(hspeed+lengthdir_x(0.25, dir), -speed_max, speed_max);
-	vspeed = clamp(vspeed+lengthdir_y(0.25, dir), -speed_max, speed_max);
+	hspeed = clamp(hspeed+lengthdir_x(acceleration, dir), -speed_max, speed_max);
+	vspeed = clamp(vspeed+lengthdir_y(acceleration, dir), -speed_max, speed_max);
 } else {
 	hspeed = lerp(hspeed, 0, 0.01);
 	vspeed = lerp(vspeed, 0, 0.01);
@@ -67,4 +69,6 @@ if instance_place_loop(x+hspeed, y, obj_wall) {
 if instance_place_loop(x, y+vspeed, obj_wall) {
 	vspeed = 0;
 }
+
+hitInvinTime--;
 

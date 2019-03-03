@@ -3,6 +3,7 @@ dir = 0;
 hspeed = 0;
 vspeed = 0;
 
+acceleration = 0.15
 speed_max = 4;
 turn_speed = 5;
 
@@ -15,3 +16,5 @@ life = life_max;
 
 gloveDistance = 0;
 gloveState = 0;
+
+hitInvinTime = 0;

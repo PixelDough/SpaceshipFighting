@@ -26,7 +26,7 @@ with input {
 		}
 	}
 
-	if keyboard_check_pressed(vk_enter) {
+	if keyboard_check_pressed(vk_anykey) {
 		var _addDevice = true;
 		for (var _dd=0; _dd<ds_list_size(global.playerData); _dd++) {
 			var _list = global.playerData[| _dd]

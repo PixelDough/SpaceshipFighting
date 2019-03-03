@@ -133,6 +133,20 @@
             "value": "Orion",
             "varName": "name",
             "varType": 2
+        },
+        {
+            "id": "7388d2ce-c660-4aca-adc9-0be811b06a6d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": true,
+            "rangeMax": 16,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "12",
+            "varName": "engine_distance",
+            "varType": 1
         }
     ],
     "solid": false,

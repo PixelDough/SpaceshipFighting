@@ -8,6 +8,7 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 draw_text_outlined(room_width/2, room_height/4, "SPACE OUT", c_white, c_black, 4, 4, sin(global.time/15)*1);
+//draw_text_color(room_width/2, room_height/4, "SPACE OUT", c_white, c_white, c_yellow, c_yellow, 1);
 
 if TITLE_STATE == TITLE_STATES.TITLE {
 	if inputCheckPressed(0, INPUT.A, inputCreate(0)) {

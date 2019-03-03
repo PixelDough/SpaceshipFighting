@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "0dc598e7-f230-49fb-bf78-1674c0d7294a",
+            "Value": {
+                "id": "5de3212f-d56d-48d7-ae8c-3568bada72a3",
+                "resourcePath": "sprites\\spr_shipFlame\\spr_shipFlame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0e107b93-5bcb-4809-a514-cbdfd353fc91",
             "Value": {
                 "id": "1d9cb6bf-1b1f-4c85-8c04-6bbf2f3b6a79",

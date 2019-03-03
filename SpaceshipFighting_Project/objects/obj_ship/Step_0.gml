@@ -14,6 +14,7 @@ if inputCheck(player_num, INPUT.A, inputCreate(player_num)) {
 if inputCheck(player_num, INPUT.DOWN, inputCreate(player_num)) {
 	speed = lerp(speed, 0, 0.1);
 }
+// Slow down to max speed
 speed = clamp(speed, -speed_max, speed_max);
 
 if inputCheck(player_num, INPUT.RIGHT, inputCreate(player_num)) - inputCheck(player_num, INPUT.LEFT, inputCreate(player_num)) != 0 {
@@ -56,8 +57,7 @@ if inputCheck(player_num, INPUT.B, inputCreate(player_num)) {
 }
 
 if inputCheckPressed(player_num, INPUT.ZR, inputCreate(player_num)) {
-	hspeed = lengthdir_x(speed_max, dir);
-	vspeed = lengthdir_y(speed_max, dir);
+	//speed *
 }
 
 self_loop();

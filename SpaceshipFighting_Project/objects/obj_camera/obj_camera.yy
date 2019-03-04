@@ -15,16 +15,6 @@
             "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
         },
         {
-            "id": "acdcc1bd-93e4-4119-b08e-b779c088fc85",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 12,
-            "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
-        },
-        {
             "id": "468d44e5-923c-45c9-a19a-ca40b97e90df",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -33,12 +23,42 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
+        },
+        {
+            "id": "0fc23dec-f27d-4e7e-bee5-0c3caef2dc6f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 73,
+            "eventtype": 8,
+            "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
+        },
+        {
+            "id": "6f734b03-a915-4081-9ff7-0a16f72f0a59",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 72,
+            "eventtype": 8,
+            "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
+        },
+        {
+            "id": "c67726e9-1a16-4411-aad9-f7ad57d179d4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 3,
+            "eventtype": 7,
+            "m_owner": "32da8adb-2e2f-4051-a9be-1720d59ec033"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,

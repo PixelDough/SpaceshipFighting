@@ -1,3 +1,2 @@
 
-draw_sprite_loop();
-draw_self_shadow(sprite_index, image_index, x, y, 1, 1, dir, c_white, 1, height, 0);
+draw_sprite_loop(sprite_index, image_index, x, y, image_xscale, image_yscale, dir, c_white, image_alpha);

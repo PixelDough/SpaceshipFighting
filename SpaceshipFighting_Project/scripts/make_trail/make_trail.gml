@@ -12,4 +12,5 @@ if global.time % _time == 0 {
 	_trail.image_angle = image_angle;
 	_trail.image_xscale = image_xscale;
 	_trail.image_yscale = image_yscale;
+	_trail.image_alpha = image_alpha/2;
 }

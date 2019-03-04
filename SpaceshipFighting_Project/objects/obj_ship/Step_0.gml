@@ -1,16 +1,21 @@
 
 depth = -bbox_top;
 
-//make_trail(2, 5);
+
 
 if inputCheck(player_num, INPUT.A, inputCreate(player_num)) {
 	//speed = clamp(speed+0.25, 0, 5);
 	hspeed = clamp(hspeed+lengthdir_x(acceleration, dir), -speed_max, speed_max);
 	vspeed = clamp(vspeed+lengthdir_y(acceleration, dir), -speed_max, speed_max);
 	
+	//Ship trail
+	var _trail = instance_create(x-lengthdir_x(12, dir), y-lengthdir_y(12, dir), obj_part_shipThrust)
+	_trail.col = ship_color;
+	_trail.image_angle = dir;
+	
 } else {
-	hspeed = lerp(hspeed, 0, 0.01);
-	vspeed = lerp(vspeed, 0, 0.01);
+	hspeed = lerp(hspeed, 0, FRICTION);
+	vspeed = lerp(vspeed, 0, FRICTION);
 }
 if inputCheck(player_num, INPUT.DOWN, inputCreate(player_num)) {
 	speed = lerp(speed, 0, 0.1);
@@ -42,7 +47,7 @@ if inputCheck(player_num, INPUT.B, inputCreate(player_num)) {
 		_laser.creator = id;
 		_laser.height = height;
 		_laser.dir = dir;
-		alarm[0] = 15;
+		alarm[0] = 45;
 	}
 	
 	// Punch

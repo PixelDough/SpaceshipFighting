@@ -23,6 +23,14 @@
             "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
             "propertyId": "7176a374-da5f-4fa5-8177-efcdb9de003d",
             "value": "Neon-X"
+        },
+        {
+            "id": "4641d6ac-7542-4596-8a4c-4ba5fe8a2eed",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "d1f70f32-68ce-4ebe-a022-546c2e73e133",
+            "value": "$FFFFFFFF"
         }
     ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",

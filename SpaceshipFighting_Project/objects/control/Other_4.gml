@@ -22,7 +22,7 @@ if instance_exists(obj_spawn_player) {
 		with _spawners[| 0] {
 			var _list = global.playerData[| _p]
 			var _shipType = _list[PLAYER_DATA.SHIP];
-			var _ship = instance_create_layer((bbox_left+bbox_right)/2, (bbox_top+bbox_bottom)/2, layer, _shipType)
+			var _ship = instance_create_layer((bbox_left+bbox_right)/2, (bbox_top+bbox_bottom)/2, "Instances", _shipType)
 			_ship.player_num = _p;
 			_ship.dir = point_direction(_ship.x, _ship.y, room_width/2, room_height/2)
 			instance_destroy();

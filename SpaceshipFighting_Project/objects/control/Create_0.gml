@@ -1,4 +1,7 @@
 
+if !singleton() 
+	exit;
+
 global.time = 0;
 global.resolution = [768, 448];
 
@@ -10,3 +13,5 @@ draw_set_font(global.font_big);
 draw_set_color(c_white);
 
 global.inputEnabled = true;
+
+global.loopSurface = surface_create((room_width*3)*4, (room_height*3)*4);

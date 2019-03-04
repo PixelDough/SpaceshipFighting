@@ -9,6 +9,8 @@ turn_speed = 5;
 
 height = 24;
 
+FRICTION = 0.001
+
 shield = noone;
 
 life_max = 3;
@@ -18,3 +20,5 @@ gloveDistance = 0;
 gloveState = 0;
 
 hitInvinTime = 0;
+
+instance_create_layer(x, y, layer, obj_effect_spawn)

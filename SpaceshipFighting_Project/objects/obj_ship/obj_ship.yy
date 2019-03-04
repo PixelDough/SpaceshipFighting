@@ -147,6 +147,20 @@
             "value": "12",
             "varName": "engine_distance",
             "varType": 1
+        },
+        {
+            "id": "d1f70f32-68ce-4ebe-a022-546c2e73e133",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "$FFE16E5B",
+            "varName": "ship_color",
+            "varType": 7
         }
     ],
     "solid": false,

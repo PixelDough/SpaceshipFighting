@@ -22,5 +22,7 @@ var _alpha = argument8;
 var _shadow_distance = argument9;
 var _shadow_alpha = argument10;
 
-draw_sprite_ext(_sprite, _subimg, _x, _y + _shadow_distance, _xscale, _yscale, _rotation, c_black, image_alpha-(1-_shadow_alpha));
-draw_sprite_ext(_sprite, _subimg, _x, _y + (sin(global.time/5)), _xscale, _yscale, _rotation, _color, _alpha);
+gpu_set_fog(true, c_black, 0, 1)
+draw_sprite_loop(_sprite, _subimg, _x, _y + _shadow_distance, _xscale, _yscale, _rotation, c_black, image_alpha-(1-_shadow_alpha));
+gpu_set_fog(false, c_black, 0, 1)
+//draw_sprite_ext(_sprite, _subimg, _x, _y, _xscale, _yscale, _rotation, _color, _alpha);

@@ -23,6 +23,14 @@
             "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
             "propertyId": "7176a374-da5f-4fa5-8177-efcdb9de003d",
             "value": "Parasite"
+        },
+        {
+            "id": "24095b52-1a24-455b-9d73-2ef7d0e29213",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "d1f70f32-68ce-4ebe-a022-546c2e73e133",
+            "value": "$FF4D00FF"
         }
     ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",

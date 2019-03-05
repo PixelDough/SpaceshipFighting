@@ -1,5 +1,6 @@
 
 audio_play_sound(snd_explosion, 100, false)
+audio_play_sound(snd_explosion2, 100, false)
 
 var _starNum = 20;
 for (var _i = 0; _i < _starNum; _i++) {

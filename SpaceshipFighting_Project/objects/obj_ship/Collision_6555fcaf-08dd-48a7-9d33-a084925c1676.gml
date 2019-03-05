@@ -1,6 +1,6 @@
 
 if other.ACTION != LASER.DIE and other.creator != id {
-	other.ACTION = LASER.DIE
+	other.alarm[0] = 1;
 	
 	event_user(0)
 	

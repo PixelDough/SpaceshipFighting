@@ -12,10 +12,10 @@ height = global.resolution[1];
 surface_resize(application_surface, width*4, height*4);
 //surface_resize(global.loopSurface, (width*3)*4, (height*3)*4);
 
-cam = camera_create();
-camera_set_view_size(cam, width, height);
-camera_set_view_pos(cam, 0, 0);
+global.cam = camera_create();
+camera_set_view_size(global.cam, width, height);
+camera_set_view_pos(global.cam, 0, 0);
 
-view_set_camera(view_camera[0], cam);
+view_set_camera(view_camera[0], global.cam);
 
 

@@ -1,2 +1,2 @@
 
-camera_destroy(cam)
+camera_destroy(global.cam)

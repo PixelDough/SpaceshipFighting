@@ -7,8 +7,8 @@
 //}
 
 
-if global.inputEnabled {
-	//x = loopVal(x+1, 0, room_width)
-	//y = loopVal(y+1, 0, room_height)
-	camera_set_view_pos(cam, x, y);
-}
+//if global.inputEnabled {
+//	x = loopVal(x+1, 0, room_width)
+//	y = loopVal(y+1, 0, room_height)
+//	camera_set_view_pos(global.cam, x, y);
+//}

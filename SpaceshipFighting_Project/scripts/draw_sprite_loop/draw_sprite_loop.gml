@@ -28,8 +28,26 @@
 
 //draw_sprite_ext(sprite_index, image_index, x, y+room_height, image_xscale, image_yscale, dir, c_white, image_alpha);
 
-surface_set_target(global.loopSurface);
+
+
+draw_sprite_ext(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8);
+
+//draw_sprite_ext(argument0, argument1, argument2-room_width, argument3, argument4, argument5, argument6, argument7, argument8);
+//draw_sprite_ext(argument0, argument1, argument2-room_width, argument3-room_height, argument4, argument5, argument6, argument7, argument8);
+//draw_sprite_ext(argument0, argument1, argument2-room_width, argument3+room_height, argument4, argument5, argument6, argument7, argument8);
+
+//draw_sprite_ext(argument0, argument1, argument2+room_width, argument3, argument4, argument5, argument6, argument7, argument8);
+//draw_sprite_ext(argument0, argument1, argument2+room_width, argument3-room_height, argument4, argument5, argument6, argument7, argument8);
+//draw_sprite_ext(argument0, argument1, argument2+room_width, argument3+room_height, argument4, argument5, argument6, argument7, argument8);
+
+//draw_sprite_ext(argument0, argument1, argument2, argument3-room_height, argument4, argument5, argument6, argument7, argument8);
+														  
+//draw_sprite_ext(argument0, argument1, argument2, argument3+room_height, argument4, argument5, argument6, argument7, argument8);
+
+
+
+//surface_set_target(global.loopSurface);
 	
-	draw_sprite_ext(argument0, argument1, (4*argument2)+(4*room_width), (4*argument3)+(4*room_height), argument4*4, argument5*4, argument6, argument7, argument8);
+//	draw_sprite_ext(argument0, argument1, (global.surfScale*argument2)+(global.surfScale*room_width), (global.surfScale*argument3)+(global.surfScale*room_height), argument4*global.surfScale, argument5*global.surfScale, argument6, argument7, argument8);
 	
-surface_reset_target();
+//surface_reset_target();

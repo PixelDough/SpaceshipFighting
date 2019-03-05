@@ -14,4 +14,5 @@ draw_set_color(c_white);
 
 global.inputEnabled = true;
 
-global.loopSurface = surface_create((room_width*3)*4, (room_height*3)*4);
+global.surfScale = 1;
+//global.loopSurface = surface_create((room_width*3)*global.surfScale, (room_height*3)*global.surfScale);

@@ -12,6 +12,8 @@ draw_text_outlined(room_width/2, room_height/4, "SPACE OUT", c_white, c_black, 4
 
 if TITLE_STATE == TITLE_STATES.TITLE {
 	if inputCheckPressed(0, INPUT.A, inputCreate(0)) {
+		audio_play_sound(snd_ui_select, 100, false)
+		global.inputEnabled = false;
 		alarm[0] = title_to_menu_time;
 		TweenFire(id, EaseOutElastic, 0, false, 0, title_to_menu_time, "title_press_scale", 0.5, 1.0);
 	}

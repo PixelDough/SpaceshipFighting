@@ -9,30 +9,30 @@ var _shortest = min(_r, _l, _u, _d);
 switch _shortest {
 	case _r:
 		image_angle = 180;
-		x+=_shortest
+		x = room_width;
 	break;
 	case _u:
 		image_angle = 270;
-		y-=_shortest
+		y = room_height
 	break
 	case _l:
 		image_angle = 0;
-		x-=_shortest
+		x=0
 	break;
 	case _d:
 		image_angle = 90;
-		y+=_shortest
+		y=0
 	break;
 }
 
 audio_stop_sound(snd_teleport);
 audio_play_sound(snd_teleport, 100, false);
 
-repeat(50) {
-	var _p = instance_create_layer(x, y, "Instances", obj_part_teleport);
-	_p.direction = image_angle + random_range(-30, 30);
+//repeat(50) {
+//	var _p = instance_create_layer(x, y, "Instances", obj_part_teleport);
+//	_p.direction = image_angle + random_range(-30, 30);
 	
-}
+//}
 
 //instance_destroy()
 

@@ -1,8 +1,8 @@
 {
-    "id": "b783c34f-815c-4c72-b67d-c30b5f0ad153",
+    "id": "bfeb7c0f-07f3-45bf-9e98-80acbcc62172",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "mus_battle1",
+    "name": "snd_ui_select",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
@@ -10,5 +10,5 @@
     "preload": false,
     "sampleRate": 44100,
     "type": 0,
-    "volume": 0.5
+    "volume": 1
 }

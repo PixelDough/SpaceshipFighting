@@ -19,6 +19,6 @@ if waitTime > 0 {
 
 waitTime--;
 
-if instance_number(obj_ship) < 2 and alarm[0] <= 0 {
+if instance_number(obj_ship) < 2 and alarm[0] <= 0 and !global.debug {
 	alarm[0] = 120;
 }

@@ -16,6 +16,9 @@ global.cam = camera_create();
 camera_set_view_size(global.cam, width, height);
 camera_set_view_pos(global.cam, 0, 0);
 
+camW = width;
+camH = height;
+
 view_set_camera(view_camera[0], global.cam);
 
 

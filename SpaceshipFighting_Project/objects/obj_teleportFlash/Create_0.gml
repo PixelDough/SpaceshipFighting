@@ -13,7 +13,7 @@ switch _shortest {
 	break;
 	case _u:
 		image_angle = 270;
-		y = room_height
+		y = 0
 	break
 	case _l:
 		image_angle = 0;
@@ -21,7 +21,7 @@ switch _shortest {
 	break;
 	case _d:
 		image_angle = 90;
-		y=0
+		y=room_height
 	break;
 }
 

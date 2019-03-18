@@ -17,6 +17,7 @@ if room == rm_results {
 	var _results = instance_create_layer(0, 0, "META", obj_menu_results);
 	_results.SCORE = SCORE;
 	_results.winner = winner;
+	_results.scoreToWin = scoreToWin;
 	instance_destroy();
 	exit;
 }

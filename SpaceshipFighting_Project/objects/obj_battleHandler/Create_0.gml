@@ -12,7 +12,7 @@ for (var _i = 0; _i < ds_list_size(global.playerData); _i++) {
 
 winner = noone;
 
-scoreToWin = 3;
+scoreToWin = 5;
 
 enum MODES {
 	NORMAL,

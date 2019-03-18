@@ -1,7 +1,7 @@
 
 var _scoreCount = array_length_1d(SCORE);
 var _width = (_scoreCount*128)/2;
-var _height = 256/2;
+
 
 
 //gpu_set_blendenable(false)
@@ -27,7 +27,7 @@ for (var _i=0; _i<_scoreCount; _i++) {
 	var _player = global.playerData[| _i];
 	
 	var _x = (room_width/2) + ( (_i-((_scoreCount-1)/2))*128);
-	var _y = room_height/2 - _height/2;
+	var _y = room_height-128 - (((floor(SCORE_FINAL[_i])/scoreToWin) * 256));
 	
 	
 	if _i == winner and winnerFound {
@@ -55,7 +55,7 @@ for (var _i=0; _i<_scoreCount; _i++) {
 	
 	draw_sprite_ext(object_get_sprite(_player[PLAYER_DATA.SHIP]), 0, _x, _y, 2, 2, 90, c_white, 1)
 	
-	var _textY = room_height/2 + _height/2
+	var _textY = room_height-64
 	draw_text_outlined(_x, _textY, floor(SCORE_FINAL[_i]), c_white, c_black, 2, 2, 0);
 }
 

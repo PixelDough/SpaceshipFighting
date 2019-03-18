@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "009d7fe4-0587-4d68-bf0a-69d60e71057c",
+            "Value": {
+                "id": "7264bc3f-fcf7-4778-85af-edc3097101d1",
+                "resourcePath": "scripts\\save_settings\\save_settings.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "00ede0fd-da4f-428a-b3a3-03f63afc3c0d",
             "Value": {
                 "id": "5242e8ff-5cac-4156-bd76-afa4fee71599",
@@ -2767,6 +2775,14 @@
             }
         },
         {
+            "Key": "c2eae545-8752-491c-a6a6-c80a3357f0e3",
+            "Value": {
+                "id": "42d2313e-7972-40cf-a203-af0d89944587",
+                "resourcePath": "objects\\audio_loader\\audio_loader.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c3faf112-280a-41d9-8253-b8507fffe804",
             "Value": {
                 "id": "5cac7798-90cb-462f-8e4f-ba9b184ceec8",
@@ -3183,6 +3199,14 @@
             }
         },
         {
+            "Key": "de7501e8-3c62-4b2b-a88f-d9bb5d8f4249",
+            "Value": {
+                "id": "285e8b38-04c2-4f74-b0b5-8e11236ecabb",
+                "resourcePath": "rooms\\rm_load\\rm_load.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "de925728-b5cb-40cc-9a49-6c8869e6ca62",
             "Value": {
                 "id": "bcd95dc4-f6bb-4a50-b0d5-0ec80c2346e5",
@@ -3295,6 +3319,14 @@
             }
         },
         {
+            "Key": "e746a794-e1c2-42d1-aea5-086389dfd3f3",
+            "Value": {
+                "id": "4e447f7d-fc6e-4383-aaab-e05491306749",
+                "resourcePath": "sounds\\snd_pointGet\\snd_pointGet.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e767b71b-a6a0-4351-8562-193e48440c35",
             "Value": {
                 "id": "b4fd4f66-4fe4-4f7e-b9aa-948c7f8d9b7a",
@@ -3347,6 +3379,14 @@
             "Value": {
                 "id": "770017eb-7c2f-4458-8bf9-c1939088afff",
                 "resourcePath": "scripts\/ds_grid_delete_row\/ds_grid_delete_row.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ec53b1ba-9154-44b8-8945-824f43be719b",
+            "Value": {
+                "id": "04238608-63e8-4ca5-8061-1b4994e7c1be",
+                "resourcePath": "scripts\\load_settings\\load_settings.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3902,7 +3942,9 @@
         "47e79235-e384-41a4-8732-b73d021a3af6",
         "ebea4b36-0630-4795-bcca-4c8b58505ebf",
         "4fe0a74b-d281-4bad-bc05-b428859194d3",
-        "fcf11166-9264-447d-86f6-44b667840b0c"
+        "fcf11166-9264-447d-86f6-44b667840b0c",
+        "ec53b1ba-9154-44b8-8945-824f43be719b",
+        "009d7fe4-0587-4d68-bf0a-69d60e71057c"
     ],
     "tutorial": ""
 }

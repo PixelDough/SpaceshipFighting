@@ -15,4 +15,12 @@ draw_set_color(c_white);
 global.inputEnabled = true;
 
 global.surfScale = 1;
+
+
+// Settings setup
+load_settings();
+
+
+
+
 //global.loopSurface = surface_create((room_width*3)*global.surfScale, (room_height*3)*global.surfScale);

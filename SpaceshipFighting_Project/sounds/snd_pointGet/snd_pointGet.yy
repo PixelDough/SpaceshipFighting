@@ -1,8 +1,8 @@
 {
-    "id": "017e5250-9226-4ba3-bb94-119ea5dc92ad",
+    "id": "e746a794-e1c2-42d1-aea5-086389dfd3f3",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "snd_voice_set",
+    "name": "snd_pointGet",
     "audioGroupGuid": "3506cf52-7b9f-4e77-9752-9bc7eefc6a37",
     "bitDepth": 1,
     "bitRate": 128,

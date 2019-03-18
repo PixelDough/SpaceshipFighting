@@ -50,7 +50,7 @@ if scoreTextShow {
 		draw_sprite_outlined(object_get_sprite(_player[PLAYER_DATA.SHIP]), image_index, _x, _y, 2+SCORE_SHIP_SCALE[_i], 2+SCORE_SHIP_SCALE[_i], SCORE_SHIP_ROT[_i], c_white, c_white)
 		
 		var _textY = room_height/2 + _height/2
-		draw_text_outlined(_x, _textY + SCORE_BOUNCE[_i], SCORE[_i], c_white, c_white, 2, 2, 0);
+		draw_text_outlined(_x, _textY + SCORE_BOUNCE[_i], SCORE[_i], c_white, c_gray, 2, 2, 0);
 	}
 	
 }

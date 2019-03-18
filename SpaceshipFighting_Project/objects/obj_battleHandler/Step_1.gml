@@ -20,6 +20,7 @@ if waitTime > 0 {
 waitTime--;
 
 if instance_number(obj_ship) <= 1 and !scoreTextShow and !global.debug {
+	winner = obj_ship.player_num;
 	scoreTextTweenIn = TweenFire(id, EaseOutCubic, 0, false, 30, 60, "scoreTextX", -room_width, 0)
 	alarm[0] = 90;
 	scoreTextShow = true;

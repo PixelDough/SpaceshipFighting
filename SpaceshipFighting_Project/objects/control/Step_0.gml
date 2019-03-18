@@ -1,6 +1,11 @@
 
 global.time++;
 
+if global.musicEnabled
+	audio_group_set_gain(audiogroup_music, 1, 0);
+else
+	audio_group_set_gain(audiogroup_music, 0, 0);
+
 if keyboard_check_pressed(vk_escape) {
 	game_end();
 }

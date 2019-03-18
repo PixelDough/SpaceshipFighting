@@ -3,7 +3,7 @@
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "mus_battle2",
-    "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
+    "audioGroupGuid": "9da45ed1-d275-4168-9f1c-964e0fea0461",
     "bitDepth": 1,
     "bitRate": 128,
     "kind": 0,

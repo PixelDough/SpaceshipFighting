@@ -19,6 +19,12 @@ if waitTime > 0 {
 
 waitTime--;
 
-if instance_number(obj_ship) < 2 and alarm[0] <= 0 and !global.debug {
-	alarm[0] = 120;
+if instance_number(obj_ship) <= 1 and !scoreTextShow and !global.debug {
+	scoreTextTweenIn = TweenFire(id, EaseOutCubic, 0, false, 30, 60, "scoreTextX", -room_width, 0)
+	alarm[0] = 90;
+	scoreTextShow = true;
+}
+
+if scoreTextX >= room_width and !instance_exists(obj_roomChange_swipe) {
+	room_change_swipe(room)
 }

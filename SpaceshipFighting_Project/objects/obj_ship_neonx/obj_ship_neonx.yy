@@ -9,14 +9,6 @@
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": [
         {
-            "id": "f124e21a-03c7-4a00-b205-f033bbf3bc95",
-            "modelName": "GMOverriddenProperty",
-            "mvc": "1.0",
-            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
-            "propertyId": "d38131a2-5ed8-4ea8-96f6-217b8d81feeb",
-            "value": "obj_laser_neonx"
-        },
-        {
             "id": "2470d89b-9b99-4e12-bd86-3dc4cebc01a6",
             "modelName": "GMOverriddenProperty",
             "mvc": "1.0",
@@ -31,6 +23,14 @@
             "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
             "propertyId": "d1f70f32-68ce-4ebe-a022-546c2e73e133",
             "value": "$FFFFFFFF"
+        },
+        {
+            "id": "d15368a2-2763-4674-ac13-7f6c8911e23e",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "d38131a2-5ed8-4ea8-96f6-217b8d81feeb",
+            "value": "spr_laser7"
         }
     ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",

@@ -43,10 +43,11 @@ if inputCheck(player_num, INPUT.B, inputCreate(player_num)) {
 	
 	// Shoot Laser
 	if inputCheck(player_num, INPUT.X, inputCreate(player_num)) and alarm[0] <= 0 {
-		var _laser = instance_create_depth(x, y, depth+10, laser_type);
+		var _laser = instance_create_depth(x, y, depth+10, obj_laser);
 		_laser.creator = id;
 		_laser.height = height;
 		_laser.dir = dir;
+		_laser.sprite_index = laser_type;
 		alarm[0] = 45;
 	}
 	

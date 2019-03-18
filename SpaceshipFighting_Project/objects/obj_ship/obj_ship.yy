@@ -101,8 +101,8 @@
             "rangeEnabled": false,
             "rangeMax": 10,
             "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "obj_laser",
+            "resourceFilter": 2,
+            "value": "spr_laser1",
             "varName": "laser_type",
             "varType": 5
         },

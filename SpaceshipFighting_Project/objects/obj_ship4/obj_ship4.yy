@@ -23,6 +23,14 @@
             "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
             "propertyId": "d1f70f32-68ce-4ebe-a022-546c2e73e133",
             "value": "$FF20BCFA"
+        },
+        {
+            "id": "b3fab97c-6d77-4b37-b0a1-54b478f21897",
+            "modelName": "GMOverriddenProperty",
+            "mvc": "1.0",
+            "objectId": "56eeab94-708d-4678-8b7b-0cca372060a7",
+            "propertyId": "d38131a2-5ed8-4ea8-96f6-217b8d81feeb",
+            "value": "spr_laser4"
         }
     ],
     "parentObjectId": "56eeab94-708d-4678-8b7b-0cca372060a7",

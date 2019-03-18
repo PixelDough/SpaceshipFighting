@@ -20,11 +20,16 @@ for (var _i=0; _i<_size; _i++) {
 			
 		_col = c_white
 		_col2 = c_black
+		if _i == 1
+			_col = c_dkgray;
 		
 		draw_text_outlined((room_width/2)-128, _y+32, _this[MODES_ARR.SUBTITLE], _col, _col2, _this[MODES_ARR.SCALE]/2, _this[MODES_ARR.SCALE]/2, 0);
 		
 		if inputCheckPressed(0, INPUT.A, inputCreate(0)) and _this[2] != noone {
-			script_execute(_this[MODES_ARR.SCRIPT]);
+			if _i == 0
+				script_execute(_this[MODES_ARR.SCRIPT]);
+			else
+				audio_play_sound(snd_error, 100, false);
 		}
 			
 	} else {

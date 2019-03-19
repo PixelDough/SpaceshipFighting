@@ -4,7 +4,7 @@ SCORE[winner]++
 	
 TweenFire(id, EaseInOutSine, TWEEN_MODE_BOUNCE, false, 0, 10, TPArray(SCORE_SHIP_SCALE, winner), 0, 1);
 	
-if SCORE[winner] >= scoreToWin {
+if SCORE[winner] >= global.scoreToWin {
 	audio_stop_all();
 	TweenFire(id, EaseInOutSine, TWEEN_MODE_PATROL, false, 0, 30, TPArray(SCORE_BOUNCE, winner), -16, 16)
 	alarm[1] = 120;

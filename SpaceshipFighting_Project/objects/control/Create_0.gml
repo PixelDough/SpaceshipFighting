@@ -16,6 +16,8 @@ global.inputEnabled = true;
 
 global.surfScale = 1;
 
+global.scoreToWin = 3;
+
 
 // Settings setup
 load_settings();

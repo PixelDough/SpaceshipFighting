@@ -3,49 +3,62 @@
 
 //draw_surface_stretched(global.loopSurface, 0, 0, 768, 448)
 
-var _x=x;
-var _y=y;
+var _x=0;
+var _y=0;
 
 var _list = instance_list_random(obj_ship)
 
 ds_list_sort(_list, true)
 
-var _thisDistance = 1;
+var _thisDistance = 0;
 
-//with obj_ship {
-//	if x < other.x+64 or y < other.y+64 or x > other.x+other.camW-64 or y > other.y+other.camH-64 {
-//		if other.camW < room_width and other.camH < room_height {
-//			other.camW = clamp(other.camW+2, 384, room_width);
-//			other.camH = clamp(other.camH+2, 224, room_height);
-//		}
-//	}
-//}
+if !instance_exists(obj_ship) {
+	_thisDistance = room_height;
+}
 
-
-for (var _i=0; _i<ds_list_size(_list); _i++) {
+with obj_ship {
+	if instance_number(obj_ship) > 1 {
+		if _x == 0 and _y == 0 {
+			_x = x;
+			_y = y;
+		} else {
+			_x = mean(_x, x);
+			_y = mean(_y, y);
+		}
 	
-	if _i == 0 {
-		_x=_list[| _i].x;
-		_y=_list[| _i].y;
-	} else {
-		
-		
-		_x = mean(_x, _list[| _i].x);
-		_y = mean(_y, _list[| _i].y);
+		for (var _i=0; _i<ds_list_size(_list); _i++) {
+			_thisDistance = max(_thisDistance, distance_to_object(_list[| _i]))
+		}
 	}
 }
 
-var _w = camW*_thisDistance;
-var _h = camH*_thisDistance;
+
+//for (var _i=0; _i<ds_list_size(_list); _i++) {
+	
+//	if _i == 0 {
+//		_x=_list[| _i].x;
+//		_y=_list[| _i].y;
+//	} else {
+		
+		
+//		_x = mean(_x, _list[| _i].x);
+//		_y = mean(_y, _list[| _i].y);
+//	}
+//}
+
+_thisDistance = clamp(_thisDistance, height, room_width)
+
+//var _h = _thisDistance;
+//var _w = _thisDistance * width/height;
+
+//camera_set_view_size(global.cam, _w, _h)
+
+//_x = clamp(_x, _w/2, room_width-_w/2);
+//_y = clamp(_y, _h/2, room_height-_h/2);
 
 
-camera_set_view_size(global.cam, _w, _h)
 
-_x = clamp(_x, _w/2, room_width-_w/2);
-_y = clamp(_y, _h/2, room_height-_h/2);
-
-camera_set_view_pos(global.cam, _x-_w/2, _y-_h/2);
-
+//track_object_type(global.cam, obj_ship, width)
 
 ds_list_destroy(_list)
 

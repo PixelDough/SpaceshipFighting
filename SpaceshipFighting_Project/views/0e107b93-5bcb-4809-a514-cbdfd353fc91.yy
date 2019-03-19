@@ -9,7 +9,8 @@
         "3212b031-6213-41be-a58a-4b86dd9289e3",
         "ff1243c4-75c1-4aa5-87f5-d65c79110049",
         "58b5b875-4386-4859-92f6-63eaba5249a2",
-        "fb3e0c3b-ca08-4db0-9fe2-5b577b03d2a5"
+        "fb3e0c3b-ca08-4db0-9fe2-5b577b03d2a5",
+        "a7374ea8-f624-4adf-a91b-a690c6fe303c"
     ],
     "filterType": "GMScript",
     "folderName": "compatibility",

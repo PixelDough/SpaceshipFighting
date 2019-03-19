@@ -8,6 +8,8 @@ introTextScale = 0;
 introTextAngle = 0;
 introText = "READY";
 
+width = global.resolution[0];
+height = global.resolution[1];
 
 scoreTextFade = 0;
 scoreTextX = -room_width;
@@ -17,7 +19,6 @@ if room == rm_results {
 	var _results = instance_create_layer(0, 0, "META", obj_menu_results);
 	_results.SCORE = SCORE;
 	_results.winner = winner;
-	_results.scoreToWin = scoreToWin;
 	instance_destroy();
 	exit;
 }

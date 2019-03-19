@@ -1,0 +1,2 @@
+
+global.scoreToWin = MENU_SETTINGS[0, SETTINGS_ARR.VAL]

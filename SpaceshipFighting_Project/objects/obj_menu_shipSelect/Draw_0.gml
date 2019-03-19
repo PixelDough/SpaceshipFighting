@@ -120,15 +120,20 @@ if allReady or global.debug {
 		audio_play_sound(snd_shipSelect_readyToBattle, 100, false);
 		TweenFire(id, EaseOutElastic, 0, false, 0, 45, "startScale", startScale, 2)
 	}
-	draw_text_outlined(room_width/2, room_height-32, "[START] BATTLE", c_white, c_black, startScale, startScale, 0)
+	draw_text_outlined(room_width/2, room_height-32, "START - BATTLE", c_white, c_black, startScale, startScale, 0)
 	// Start game
 	if inputCheckPressed(0, INPUT.START, inputCreate(0)) {
 		room_change_swipe(room0)
 	}
 } else {
 	startScale = 0;
+	draw_text_outlined(room_width/2, room_height-32, "SELECT - BATTLE SETTINGS", c_white, c_black, 1, 1, 0)
 }
 
 draw_text_outlined(room_width/2, 32, "BATTLE MODE", c_white, c_black, 2, 2, 0)
+
+if inputCheckPressed(0, INPUT.SELECT, inputCreate(0)) {
+	room_change_swipe(rm_settings_battle)
+}
 
 newInputListen();

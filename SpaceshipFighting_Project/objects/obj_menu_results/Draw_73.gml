@@ -27,7 +27,7 @@ for (var _i=0; _i<_scoreCount; _i++) {
 	var _player = global.playerData[| _i];
 	
 	var _x = (room_width/2) + ( (_i-((_scoreCount-1)/2))*128);
-	var _y = room_height-128 - (((floor(SCORE_FINAL[_i])/scoreToWin) * 256));
+	var _y = room_height-128 - (((floor(SCORE_FINAL[_i])/global.scoreToWin) * 256));
 	
 	
 	if _i == winner and winnerFound {

@@ -1,7 +1,6 @@
 
 SCORE = [];
 winner = 1;
-scoreToWin = 0;
 
 SCORE_FINAL = [];
 for (var _i=0; _i<4; _i++) {

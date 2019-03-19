@@ -21,4 +21,7 @@ camH = height;
 
 view_set_camera(view_camera[0], global.cam);
 
+x = room_width/2;
+y = room_height/2;
+
 

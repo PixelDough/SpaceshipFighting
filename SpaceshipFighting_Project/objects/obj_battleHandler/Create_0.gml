@@ -14,8 +14,10 @@ winner = noone;
 
 enum MODES {
 	NORMAL,
-	PUNCH,
-	
+	RAPID_FIRE,
+	SOUTHPAW,
+	ADWARE
 }
+global.battleMode = MODES.NORMAL;
 
 

@@ -5,5 +5,5 @@ if global.debug {
 	//	var _star = instance_create(mouse_x, mouse_y, obj_part_star);
 	//	_star.direction = (360/_starNum) * _i
 	//}
-	instance_create_layer(mouse_x, mouse_y, "Instances", obj_effect_spawn)
+	instance_create_layer(mouse_x, mouse_y, "Instances", obj_ad_annoying)
 }

@@ -807,6 +807,14 @@
             }
         },
         {
+            "Key": "34b0335d-7d02-477c-b907-6036def1f1c2",
+            "Value": {
+                "id": "5007ce0c-7290-40eb-9257-475d0fd9caf9",
+                "resourcePath": "scripts\\shipPassive\\shipPassive.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "352a4611-b5e2-4f78-b93d-9517791f67d1",
             "Value": {
                 "id": "e5c3572c-d316-4f86-a95c-9d7e832dbee0",
@@ -1711,6 +1719,14 @@
             }
         },
         {
+            "Key": "6da18a28-7d22-49de-8d2d-b8d7ebc8fa2b",
+            "Value": {
+                "id": "339aa524-4256-4913-9530-767d95ce90f3",
+                "resourcePath": "sprites\\spr_laserBlast\\spr_laserBlast.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6df455de-2439-4d4b-bf49-cce212f41d74",
             "Value": {
                 "id": "93e41101-2361-420f-a4ea-3b2a88a7818a",
@@ -2060,6 +2076,14 @@
                 "id": "82f1f6d0-a57e-4045-983a-74e556d354c7",
                 "resourcePath": "scripts\/TweenEasySpeed\/TweenEasySpeed.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "883a968c-3a28-42af-863c-0022a9b6fac3",
+            "Value": {
+                "id": "ccc6468d-95e1-4c2d-882d-a9fd6004aa42",
+                "resourcePath": "sprites\\spr_target\\spr_target.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2551,6 +2575,14 @@
             }
         },
         {
+            "Key": "aaa41185-b16d-4f52-89d7-c2f963ccd8df",
+            "Value": {
+                "id": "34ca2b29-c237-4ab7-97a6-9ba17d47d130",
+                "resourcePath": "sprites\\spr_ad_win\\spr_ad_win.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ab5aec8b-6de9-4458-8904-df19d38bc5f9",
             "Value": {
                 "id": "eae94f69-9407-420e-b5ec-551bfd395105",
@@ -2932,6 +2964,14 @@
                 "id": "a6fd89e2-c038-4add-9e8f-ea4a2c65e809",
                 "resourcePath": "sounds\/snd_ui_select\/snd_ui_select.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "bffc3b01-0654-4de0-afd8-9d30e3bb3316",
+            "Value": {
+                "id": "90464355-a9ce-4e6f-9941-447e7908c66b",
+                "resourcePath": "objects\\obj_laserBlast\\obj_laserBlast.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -4182,6 +4222,7 @@
         "ec53b1ba-9154-44b8-8945-824f43be719b",
         "009d7fe4-0587-4d68-bf0a-69d60e71057c",
         "36ba6360-ecf9-49ac-be79-ba33048ca45a",
+        "34b0335d-7d02-477c-b907-6036def1f1c2",
         "5a9abada-6b18-484b-b283-5a3e60225d43",
         "1195f01c-5850-4c59-ab27-89e78c389990",
         "91d279bf-196e-4ee8-a1eb-cc5942a935c3",

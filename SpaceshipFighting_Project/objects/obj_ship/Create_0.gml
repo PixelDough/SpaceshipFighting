@@ -20,5 +20,8 @@ gloveDistance = 0;
 gloveState = 0;
 
 hitInvinTime = 0;
+hitInvinTimeMax = 120;
+
+isIt = false;
 
 instance_create_layer(x, y, layer, obj_effect_spawn)

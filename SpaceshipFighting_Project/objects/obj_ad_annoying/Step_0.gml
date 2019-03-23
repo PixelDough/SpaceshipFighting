@@ -1,5 +1,5 @@
 
-depth = -y - 999
+
 
 if (x < 0 and hspeed < 0) or (x+sprite_width > room_width and hspeed > 0) {
 	hspeed = -hspeed;

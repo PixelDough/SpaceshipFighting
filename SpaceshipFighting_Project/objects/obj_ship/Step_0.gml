@@ -1,4 +1,6 @@
 
+shipPassive(global.battleMode);
+
 depth = -bbox_top;
 
 

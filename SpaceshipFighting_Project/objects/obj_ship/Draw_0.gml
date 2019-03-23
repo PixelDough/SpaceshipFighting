@@ -38,6 +38,10 @@ draw_sprite_loop(sprite_index, image_index, x, y + (sin(global.time/5)), image_x
 
 gpu_set_fog(false, c_red, 0, 1)
 
+if isIt {
+	draw_sprite(spr_target, 0, x, y);
+}
+
 //if hasShield {
 //	draw_sprite_ext(spr_shield, 0, x, y-height, 1, 1, dir, c_white, 1);
 //	//draw_sprite(spr_shield, 0, x, y-height);

@@ -6,12 +6,22 @@ switch (_mode) {
 	
 	default:
 		
-	exit;
+	break;
 	
 	case MODES.ADWARE:
 		repeat(5) {
 			instance_create(random_range(0, room_width), random_range(0, room_height), obj_ad_annoying);
 		}
-	exit;
+	break;
+	
+	case MODES.TAG:
+		var _shipNum = irandom(instance_number(obj_ship)-1);
+		with obj_ship {
+			if player_num == _shipNum {
+				isIt = true;
+				exit;
+			}
+		}
+	break
 	
 }

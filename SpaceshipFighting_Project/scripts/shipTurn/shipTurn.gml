@@ -6,10 +6,10 @@ switch (_mode) {
 	
 	default:
 		dir -= (inputCheck(player_num, INPUT.RIGHT, inputCreate(player_num)) - inputCheck(player_num, INPUT.LEFT, inputCreate(player_num))) * turn_speed;
-	exit;
+	break;
 	
 	case MODES.SOUTHPAW:
 		dir += (inputCheck(player_num, INPUT.RIGHT, inputCreate(player_num)) - inputCheck(player_num, INPUT.LEFT, inputCreate(player_num))) * turn_speed;
-	exit
+	break;
 	
 }

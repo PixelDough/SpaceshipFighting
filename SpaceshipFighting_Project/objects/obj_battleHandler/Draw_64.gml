@@ -46,6 +46,6 @@ if scoreTextShow {
 	
 }
 
-
+//draw_text_outlined(10, 10, modeList[| modeCurrent], c_white, c_black, 1, 1, 0)
 
 draw_text_outlined(width/2, height/2, introText, c_white, c_black, introTextScale, introTextScale, introTextAngle)

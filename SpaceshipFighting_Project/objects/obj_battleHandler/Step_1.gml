@@ -11,6 +11,12 @@ if waitTime > 0 {
 	//}
 	if waitTime == 1 {
 		audio_play_sound(snd_voice_battle, 100, false)
+		
+		if global.randomBattleEvents {
+			alarm[2] = 60*10;
+		}
+		event_user(0);
+		
 	}
 	
 } else {

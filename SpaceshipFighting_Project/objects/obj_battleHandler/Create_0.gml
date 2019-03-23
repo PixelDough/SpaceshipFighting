@@ -16,8 +16,18 @@ enum MODES {
 	NORMAL,
 	RAPID_FIRE,
 	SOUTHPAW,
-	ADWARE
+	ADWARE,
+	TAG,
+	LENGTH
 }
 global.battleMode = MODES.NORMAL;
+
+modeList = ds_list_create();
+for (var _i=0; _i<MODES.LENGTH; _i++) {
+	ds_list_add(modeList, _i);
+}
+ds_list_shuffle(modeList);
+modeCurrent = 0;
+
 
 

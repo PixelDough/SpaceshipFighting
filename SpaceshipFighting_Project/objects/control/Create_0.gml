@@ -17,6 +17,7 @@ global.inputEnabled = true;
 global.surfScale = 1;
 
 global.scoreToWin = 3;
+global.randomBattleEvents = true;
 
 
 // Settings setup

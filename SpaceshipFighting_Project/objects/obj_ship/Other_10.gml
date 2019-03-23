@@ -4,7 +4,7 @@ if hitInvinTime > 0
 	exit;
 
 life--;
-hitInvinTime = 120;
+hitInvinTime = hitInvinTimeMax;
 
 if life == 2 {
 	audio_play_sound(snd_ship_hit, 100, false);

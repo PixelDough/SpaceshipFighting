@@ -16,20 +16,27 @@ if !instance_exists(obj_ship) {
 	_thisDistance = room_height;
 }
 
-with obj_ship {
+for (var _i=0; _i<ds_list_size(_list); _i++) {
 	if instance_number(obj_ship) > 1 {
-		if _x == 0 and _y == 0 {
-			_x = x;
-			_y = y;
-		} else {
-			_x = mean(_x, x);
-			_y = mean(_y, y);
-		}
-	
-		for (var _i=0; _i<ds_list_size(_list); _i++) {
-			_thisDistance = max(_thisDistance, distance_to_object(_list[| _i]))
+		with _list[| _i] {
+			// CORRECT DO NOT CHANGE
+			if _x == 0 and _y == 0 {
+				_x = x;
+				_y = y;
+			} else {
+				_x = mean(_x, x);
+				_y = mean(_y, y);
+			}
+		
+			// Distance/Zoom
+			for (var _s=0; _s<ds_list_size(_list); _s++) {
+				var _ship = _list[| _s];
+				_thisDistance = max(_thisDistance, distance_to_point(_ship.x, _ship.y))
+			}
 		}
 	}
+	//draw_set_halign(fa_left)
+	//draw_text(10, 10, _thisDistance);
 }
 
 
@@ -46,15 +53,36 @@ with obj_ship {
 //	}
 //}
 
-_thisDistance = clamp(_thisDistance, height, room_width)
+//_thisDistance = clamp(_thisDistance, height, room_width)
 
-//var _h = _thisDistance;
-//var _w = _thisDistance * width/height;
+//if instance_number(obj_ship) > 1 {
+//	var _h = camZoom + 128;
+//	var _w = (_h * width/height);
 
-//camera_set_view_size(global.cam, _w, _h)
+//	_h = clamp(_h, 768, room_height);
+//	_w = clamp(_w, 448, room_width);
 
-//_x = clamp(_x, _w/2, room_width-_w/2);
-//_y = clamp(_y, _h/2, room_height-_h/2);
+//	camera_set_view_size(global.cam, _w, _h)
+
+//	//_x = clamp(_x, _w/2, room_width-_w/2);
+//	//_y = clamp(_y, _h/2, room_height-_h/2);
+//}
+
+if instance_number(obj_ship) > 1 {
+	var _h = _thisDistance+96;
+	_h = clamp(_h, 448, room_height);
+	var _w = (_h * width/height);
+	
+	camera_set_view_size(global.cam, _w, _h)
+	
+	
+	// CORRECT DO NOT CHANGE
+	_x = clamp(_x, _w/2, room_width-_w/2);
+	_y = clamp(_y, _h/2, room_height-_h/2);
+	
+	camera_set_view_pos(global.cam, _x-_w/2, _y-_h/2);
+	
+}
 
 
 

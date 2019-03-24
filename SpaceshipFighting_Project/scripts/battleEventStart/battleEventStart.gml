@@ -9,9 +9,9 @@ switch (_mode) {
 	break;
 	
 	case MODES.ADWARE:
-		repeat(5) {
+		//repeat(3) {
 			instance_create(random_range(0, room_width), random_range(0, room_height), obj_ad_annoying);
-		}
+		//}
 	break;
 	
 	case MODES.TAG:
